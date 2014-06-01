@@ -1,0 +1,19 @@
+[filter "media"]
+  clean = git-media-clean %f
+  smudge = git-media-smudge %f
+[user]
+  name = Ryota Kameoka
+  email = noise0607@gmail.com
+[color]
+  ui = auto
+[alias]
+  lg = log --oneline --graph --decorate
+  co = checkout
+  cm = commit -m
+  st = status
+  br = branch
+  ft = fetch
+[merge]
+	ff = false
+[core]
+	editor = /usr/local/bin/vim
