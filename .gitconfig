@@ -3,7 +3,7 @@
   smudge = git-media-smudge %f
 [user]
   name = Ryota Kameoka
-  email = noise0607@gmail.com
+  email = kameoka.ryota@gmail.com
 [color]
   ui = auto
 [alias]
