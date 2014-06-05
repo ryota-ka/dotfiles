@@ -208,3 +208,6 @@ which tmux 2>&1 >/dev/null && [ -z $TMUX ] && (tmux -2 attach || tmux -2 new-ses
 
 # OpenCV for Python
 export PYTHONPATH=/usr/local/Cellar/opencv/2.4.9/lib/pkgconfig:$PYTHONPATH
+
+# alias hub as git
+alias git=hub
