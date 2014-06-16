@@ -387,6 +387,7 @@ function! s:LoadBundles()
   NeoBundle 'Shougo/vimfiler.vim'
   NeoBundle 'h1mesuke/unite-outline'
   NeoBundle 'wavded/vim-stylus'
+  NeoBundle 'kchmck/vim-coffee-script'
 
 endfunction
 function! s:InitNeoBundle()
