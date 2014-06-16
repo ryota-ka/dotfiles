@@ -386,6 +386,7 @@ function! s:LoadBundles()
   NeoBundle 'Shougo/unite.vim'
   NeoBundle 'Shougo/vimfiler.vim'
   NeoBundle 'h1mesuke/unite-outline'
+  NeoBundle 'wavded/vim-stylus'
 
 endfunction
 function! s:InitNeoBundle()
