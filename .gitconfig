@@ -13,6 +13,9 @@
   st = status
   br = branch
   ft = fetch
+  bri = browse -- issues
+  brp = browse -- pulls
+  pr = "!sh -c 'hub pull-request -i $1 -b $2' -"
 [merge]
 	ff = false
 [core]

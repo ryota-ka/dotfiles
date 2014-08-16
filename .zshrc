@@ -154,6 +154,8 @@ alias py='/usr/local/bin/python'
 
 alias home='cd ~'
 
+alias ta='tmux attach-session -t'
+
 # C で標準出力をクリップボードにコピーする
 # mollifier delta blog : http://mollifier.hatenablog.com/entry/20100317/p1
 if which pbcopy >/dev/null 2>&1 ; then
@@ -191,7 +193,10 @@ function chpwd() {
 
 ';
 ls;
+tmux rename-window "zsh:$PWD:t";
 }
+
+tmux rename-window "zsh:$PWD:t";
 
 setopt globdots
 
@@ -214,3 +219,4 @@ export PYTHONPATH=/usr/local/Cellar/opencv/2.4.9/lib/pkgconfig:$PYTHONPATH
 
 # alias hub as git
 alias git=hub
+
