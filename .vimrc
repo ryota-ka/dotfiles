@@ -149,9 +149,13 @@ if &t_Co > 2 || has('gui_running')
   syntax on
 endif
 
-"色テーマ設定
-"gvimの色テーマは.gvimrcで指定する
-"colorscheme molokai
+" Solarized 設定
+set t_Co=256
+set background=dark
+if !has('gui_running')
+  let g:solarized_termcolors=&t_Co
+  let g:solarized_termtrans=1
+endif
 
 """"""""""""""""""""""""""""""
 "ステータスラインに文字コードやBOM、16進表示等表示
@@ -217,7 +221,7 @@ endfunction
 "ヘルプ検索
 nnoremap <F1> K
 "現在開いているvimスクリプトファイルを実行
-nnoremap <F8> :source %<CR>
+nnoremap <F8>source ~/.vimrc<CR>
 "強制全保存終了を無効化
 nnoremap ZZ <Nop>
 "カーソルをj k では表示行で移動する。物理行移動は<C-n>,<C-p>
@@ -234,6 +238,22 @@ nnoremap l <Right>zv
 "----------------------------------------
 " 挿入モード
 "----------------------------------------
+"""-----------------------------
+""  insert_modeでのカーソル操作
+""------------------------------
+""移動
+imap <C-a> <Home>
+imap <C-e> <End>
+imap <C-b> <Left>
+imap <C-f> <Right>
+imap <C-n> <Down>
+imap <C-p> <UP>
+""消去
+imap <C-h> <BS>
+imap <C-k> <ESC>d$i
+imap <C-d> <delete>
+set whichwrap=h,l,<,>
+set backspace=start,eol,indent
 
 "----------------------------------------
 " ビジュアルモード
@@ -269,10 +289,6 @@ if has('syntax')
     autocmd InsertLeave * call s:StatusLine('Leave')
   augroup END
 endif
-" if has('unix') && !has('gui_running')
-"   " ESCでキー入力待ちになる対策
-"   inoremap <silent> <ESC> <ESC>
-" endif
 
 let s:slhlcmd = ''
 function! s:StatusLine(mode)
@@ -330,25 +346,6 @@ endif
 "  au BufEnter * execute ":silent! lcd " . escape(expand("%:p:h"), ' ')
 "endif
 
-""""""""""""""""""""""""""""""
-"Windowsで内部エンコーディングがcp932以外の場合
-"makeのメッセージが化けるのを回避
-""""""""""""""""""""""""""""""
-"if has('win32') || has('win64') || has('win95') || has('win16')
-"  au QuickfixCmdPost make call QFixCnv('cp932')
-"endif
-"
-"function! QFixCnv(enc)
-"  if a:enc == &enc
-"    return
-"  endif
-"  let qflist = getqflist()
-"  for i in qflist
-"    let i.text = iconv(i.text, a:enc, &enc)
-"  endfor
-"  call setqflist(qflist)
-"endfunction
-
 "----------------------------------------
 " 各種プラグイン設定
 "----------------------------------------
@@ -358,6 +355,7 @@ autocmd FileType php set makeprg=php\ -l\ %
 function! s:WithoutBundles()
   colorscheme desert
 endfunction
+
 function! s:LoadBundles()
   NeoBundle 'Shougo/neobundle.vim'
   NeoBundle 'tpope/vim-surround'
@@ -365,7 +363,9 @@ function! s:LoadBundles()
   NeoBundle 'endel/vim-github-colorscheme'
   NeoBundle 'Shougo/neosnippet.vim'
   NeoBundle 'Shougo/neosnippet-snippets'
-  NeoBundle 'Shougo/neocomplete.vim'
+  if has('lua')
+    NeoBundle 'Shougo/neocomplete.vim'
+  endif
   NeoBundle 'itchyny/lightline.vim'
   NeoBundle 'tomasr/molokai'
   NeoBundle 'Shougo/vimproc', {
@@ -378,18 +378,18 @@ function! s:LoadBundles()
       \ }
   NeoBundle 'othree/html5.vim'
   NeoBundle 'hail2u/vim-css3-syntax'
-  NeoBundle 'joonty/vim-phpqa'
   NeoBundle 'scrooloose/syntastic'
-  NeoBundle 'tobyS/pdv'
-  NeoBundle 'othree/eregex.vim'
-  NeoBundle 'vim-scripts/Align'
   NeoBundle 'Shougo/unite.vim'
   NeoBundle 'Shougo/vimfiler.vim'
   NeoBundle 'h1mesuke/unite-outline'
   NeoBundle 'wavded/vim-stylus'
   NeoBundle 'kchmck/vim-coffee-script'
-
+  NeoBundle 'digitaltoad/vim-jade'
+  NeoBundle 'shawncplus/phpcomplete.vim'
+  NeoBundle 'Shougo/neomru.vim'
+  NeoBundle 'altercation/vim-colors-solarized'
 endfunction
+
 function! s:InitNeoBundle()
   if isdirectory(expand("~/.vim/bundle/neobundle.vim/"))
     filetype plugin indent off
@@ -408,6 +408,7 @@ function! s:InitNeoBundle()
   filetype indent plugin on
   syntax on
 endfunction
+
 call s:InitNeoBundle()
 
 "----------------------------------------
@@ -415,15 +416,16 @@ call s:InitNeoBundle()
 "----------------------------------------
 
 let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#max_list = 20
+let g:neocomplete#max_list = 10
 let g:neocomplete#enable_ignore_case = 1
 
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType html,markdown,php setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
 
 " Enable heavy omni completion.
 if !exists('g:neocomplete#sources#omni#input_patterns')
@@ -432,6 +434,48 @@ endif
 "let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 "let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
 "let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
+"
+"----------------------------------------
+"Unite設定
+"----------------------------------------
+nnoremap [unite] <Nop>
+nmap     <Space>u [unite]
+"開いていない場合はカレントディレクトリ
+nnoremap <silent> [unite]f :<C-u>VimFilerBufferDir<CR>
+nnoremap <silent> [unite]b :<C-u>Unite buffer<CR>
+nnoremap <silent> [unite]r :<C-u>Unite -buffer-name=register register<CR>
+nnoremap <silent> [unite]m :<C-u>Unite file_mru<CR>
+nnoremap <silent> [unite]c :<C-u>Unite bookmark<CR>
+nnoremap <silent> [unite]o : <C-u>Unite -no-quit -vertical -winwidth=30 outline<CR>
+
+function! s:unite_my_settings()
+  nmap <buffer> <ESC> <Plug>(unite_exit)
+  map <C-a> <Home>
+  imap <C-e> <End>
+  map <C-b> <Left>
+  map <C-f> <Right>
+  map <C-n> <Down>
+  map <C-p> <UP>
+  map <C-h> <BS>
+  nnoremap <silent><buffer><expr> <C-j> unite#do_action('split')
+  inoremap <silent><buffer><expr> <C-j> unite#do_action('split')
+  nnoremap <silent><buffer><expr> <C-v> unite#do_action('vsplit')
+  inoremap <silent><buffer><expr> <C-v> unite#do_action('vsplit')
+endfunction
+
+let g:unite_source_history_yank_enable=1
+nnoremap -sf :<C-u>VimFilerCurrentDir -split<CR>
+nnoremap ;e :<C-u>VimFiler -buffer-name=explorer -split -simple -winwidth=35 -toggle -no-quit<CR>
+nnoremap ;hf :<C-u>Unite file_mru<CR>
+nnoremap ;hy :<C-u>Unite history/yank<CR>
+
+
+"----------------------------------------
+" PHP 設定
+"----------------------------------------
+
+autocmd BufRead */dev/new-attendance/* setl noexpandtab
+
 
 "----------------------------------------
 "その他設定
@@ -447,14 +491,22 @@ imap <C-k> <Plug>(neosnippet_expand_or_jump)
 smap <C-k> <Plug>(neosnippet_expand_or_jump)
 
 let g:vimfiler_as_default_explorer = 1
-nnoremap <silent> <Space>uo       : <C-u>Unite -no-quit -vertical -winwidth=30 outline<CR>
 
-autocmd BufReadPost,FileReadPost,BufNewFile,InsertEnter * call system("tmux rename-window vim:" . expand("%:t"))
-autocmd VimLeave * call system("tmux rename-window zsh")
+autocmd VimEnter,BufReadPost,FileReadPost,BufNewFile,BufEnter,InsertEnter * call s:tmux_rename_window()
+autocmd VimLeave * call system("tmux rename-window zsh:$PWD:t")
 autocmd VimLeave * call system("tmux set-window-option -g window-status-current-format '[#I #W]'")
 autocmd VimLeave * call system("tmux set-window-option -g window-status-format '[#I #W]'")
 
+" colorscheme solarized
 colorscheme molokai
+
+function! s:tmux_rename_window()
+  if (expand("%:t")) == ''
+    call system ('tmux rename-window vim')
+  else
+    call system("tmux rename-window vim:" . expand("%:t"))
+  endif
+endfunction
 
 "----------------------------------------
 " 一時設定
