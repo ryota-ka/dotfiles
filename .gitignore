@@ -1,9 +1,0 @@
-.*
-*.swp
-*~
-tags
-
-!.gitignore
-!.gitconfig
-!.gitmodules
-!.gitkeep

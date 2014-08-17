@@ -235,6 +235,14 @@ nnoremap j gj
 nnoremap k gk
 nnoremap l <Right>zv
 
+nnoremap <C-a> <Home>
+nnoremap <C-e> <End>
+nnoremap <C-b> <Left>
+nnoremap <C-f> <Right>
+nnoremap <C-n> <Down>
+nnoremap <C-p> <UP>
+nnoremap <C-k> <ESC>d$
+
 "----------------------------------------
 " 挿入モード
 "----------------------------------------
