@@ -495,6 +495,11 @@ nnoremap ;r :bufdo e<CR>
 " Enable syntax highlighting
 nnoremap ;s :syntax on<CR>
 
+" disable q:, q/, q?
+:nnoremap q: <Nop>
+:nnoremap q/ <Nop>
+:nnoremap q? <Nop>
+
 set backspace=indent,eol,start
 set scrolloff=40
 set sidescrolloff=16
