@@ -489,6 +489,12 @@ autocmd BufRead */dev/new-attendance/* setl noexpandtab
 "その他設定
 "----------------------------------------
 
+" Reload all buffers
+nnoremap ;r :bufdo e<CR>
+
+" Enable syntax highlighting
+nnoremap ;s :syntax on<CR>
+
 set backspace=indent,eol,start
 set scrolloff=40
 set sidescrolloff=16
