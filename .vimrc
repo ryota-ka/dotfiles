@@ -250,22 +250,24 @@ nnoremap <C-k> <ESC>d$
 ""  insert_modeでのカーソル操作
 ""------------------------------
 ""移動
-imap <C-a> <Home>
-imap <C-e> <End>
-imap <C-b> <Left>
-imap <C-f> <Right>
-imap <C-n> <Down>
-imap <C-p> <UP>
+inoremap <C-a> <Home>
+inoremap<C-e> <End>
+inoremap <C-b> <Left>
+inoremap <C-f> <Right>
+inoremap <C-n> <Down>
+inoremap <C-p> <UP>
 ""消去
-imap <C-h> <BS>
-imap <C-k> <ESC>d$i
-imap <C-d> <delete>
+inoremap <C-h> <BS>
+inoremap <C-k> <ESC>d$i
+inoremap <C-d> <delete>
 set whichwrap=h,l,<,>
 set backspace=start,eol,indent
 
 "----------------------------------------
 " ビジュアルモード
 "----------------------------------------
+vnoremap j gj
+vnoremap k gk
 
 "----------------------------------------
 " コマンドモード
