@@ -19,27 +19,26 @@ SAVEHIST=1000000
 # プロンプト
 local pr_cd="[%~]     %1(v|%F{green}%1v%f|)";
 if [ $SSH_CONNECTION ];then
-	local pr_info="%F{197}%n@%m%f";
+  local pr_info="%F{197}%n@%m%f";
 else
 local pr_info="%F{208}%n@%m%f";
 fi
 PROMPT="
 $pr_cd
 $pr_info %# ";
-# 2行表示
-#PROMPT="%{${fg[red]}%}[%n@%m]%{${reset_color}%} %~%# "
-
+RPROMPT=""
 
 # 単語の区切り文字を指定する
 autoload -Uz select-word-style
 select-word-style default
-# ここで指定した文字は単語区切りとみなされる
-# / も区切りと扱うので、^W でディレクトリ１つ分を削除できる
 zstyle ':zle:*' word-chars " /=;@:{},|"
 zstyle ':zle:*' word-style unspecified
 
+
 ########################################
 # 補完
+########################################
+
 # 補完機能を有効にする
 autoload -Uz compinit
 compinit
@@ -61,8 +60,10 @@ zstyle ':completion:*:processes' command 'ps x -o pid,s,args'
 autoload -Uz zmv
 alias zmv='noglob zmv -W'
 
+
 ########################################
 # vcs_info
+########################################
 
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' formats '(%s)-[%b]'
@@ -72,21 +73,28 @@ precmd () {
     LANG=en_US.UTF-8 vcs_info
     [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
 }
-RPROMPT=""
+
+
+########################################
+# 履歴検索
+########################################
 
 # history search
 autoload history-search-end
 zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
-bindkey "^p" history-beginning-search-backward-end
-bindkey "^n" history-beginning-search-forward-end
+bindkey "^P" history-beginning-search-backward-end
+bindkey "^N" history-beginning-search-forward-end
 
-# incremental search
+# history incremental search
 bindkey "^R" history-incremental-search-backward
 bindkey "^S" history-incremental-search-forward
 
+
 ########################################
 # オプション
+########################################
+
 # 日本語ファイル名を表示可能にする
 setopt print_eight_bit
 
@@ -128,28 +136,41 @@ setopt hist_reduce_blanks
 # 補完候補が複数あるときに自動的に一覧表示する
 setopt auto_menu
 
-zstyle ':completion:*:default' menu select=1
-export ZLS_COLORS=$LS_COLORS
-zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+# 明確なドットの指定なしで.から始まるファイルをマッチ
+setopt globdots
 
 # 高機能なワイルドカード展開を使用する
 setopt extended_glob
 
+# ヒストリをインクリメンタルに追加する
+setopt inc_append_history
+
+# Unicode の正規化に関する問題を吸収
+setopt combining_chars
+
+# コマンド名が間違っていた場合に修正
 setopt correct
+
+zstyle ':completion:*:default' menu select=1
+export ZLS_COLORS=$LS_COLORS
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+
 
 ########################################
 # キーバインド
+########################################
 
 # ^R で履歴検索をするときに * でワイルドカードを使用出来るようにする
 bindkey '^R' history-incremental-pattern-search-backward
 
+
 ########################################
 # エイリアス
+########################################
 
 alias la='ls -A'
 alias ll='ls -lh'
 
-alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 
@@ -159,77 +180,55 @@ alias mkdir='mkdir -p'
 alias sudo='sudo '
 
 # グローバルエイリアス
-alias -g L='| less'
-alias -g G='| grep'
-alias -g PC='| pbcopy'
-
-alias vi='/usr/local/bin/vim'
-alias py='/usr/local/bin/python'
-
-alias home='cd ~'
-
-# C で標準出力をクリップボードにコピーする
-# mollifier delta blog : http://mollifier.hatenablog.com/entry/20100317/p1
-if which pbcopy >/dev/null 2>&1 ; then
-    # Mac
-    alias -g C='| pbcopy'
-elif which xsel >/dev/null 2>&1 ; then
-    # Linux
-    alias -g C='| xsel --input --clipboard'
-elif which putclip >/dev/null 2>&1 ; then
-    # Cygwin
-    alias -g C='| putclip'
-fi
+alias -g grep='grep --colour=auto'
+alias -g grepc='grep --colour=always'
+alias -g less='less -R'
 
 
 ########################################
 # OS 別の設定
+########################################
 case ${OSTYPE} in
-    darwin*)
-        #Mac用の設定
-        export CLICOLOR=1
-        alias ls='ls -G -F'
-        ;;
-    linux*)
-        #Linux用の設定
-        ;;
+  darwin*)
+    # Mac用の設定
+    export CLICOLOR=1
+    alias ls='ls -G -F'
+    ;;
+  linux*)
+    # Linux用の設定
+    ;;
 esac
 
-# vim:set ft=zsh:
-#
-alias tmux="TERM=screen-256color-bce tmux"
 
+########################################
+# その他設定
+########################################
+
+# cd 後の処理
 function chpwd() {
-  echo '
+  if [ `ls -Al | wc -l` -eq 0 ]; then
+    echo "\n\nempty directory";
+  else
+    echo "\n"
+    ls
+  fi
 
-';
-ls;
-tmux rename-window "zsh:$PWD:t";
+  if which tmux >/dev/null 2>&1; then
+    tmux rename-window "zsh:$PWD:t";
+  fi
 }
 
-tmux rename-window "zsh:$PWD:t";
-
-setopt globdots
-
-setopt autocd
-
-setopt auto_pushd
-setopt pushd_ignore_dups
-
-setopt hist_ignore_dups
-setopt hist_ignore_space
-setopt inc_append_history
-
-setopt COMBINING_CHARS
-
+# Emacs キーバインド
 bindkey -e
 
-# run tmux
-which tmux 2>&1 >/dev/null && [ -z $TMUX ] && (tmux -2 attach || tmux -2 new-session)
-
-# OpenCV for Python
-export PYTHONPATH=/usr/local/Cellar/opencv/2.4.9/lib/pkgconfig:$PYTHONPATH
+# tmux の設定・実行
+if which tmux >/dev/null 2>&1; then
+  alias tmux="TERM=screen-256color-bce tmux"
+  which tmux 2>&1 >/dev/null && [ -z $TMUX ] && (tmux -2 attach || tmux -2 new-session)
+  tmux rename-window "zsh:$PWD:t";
+fi
 
 # alias hub as git
-alias git=hub
-
+if which hub >/dev/null 2>&1; then
+  alias git=hub
+fi
