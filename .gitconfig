@@ -16,7 +16,10 @@
   bri = browse -- issues
   brp = browse -- pulls
   pr = "!sh -c 'hub pull-request -i $1 -b $2' -"
+  unstage = reset HEAD .
 [merge]
-	ff = false
+  ff = false
 [core]
-	editor = /usr/local/bin/vim
+  editor = /usr/local/bin/vim
+[credential]
+  helper = osxkeychain
