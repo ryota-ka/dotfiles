@@ -86,9 +86,30 @@ zle -N history-beginning-search-forward-end history-search-end
 bindkey "^P" history-beginning-search-backward-end
 bindkey "^N" history-beginning-search-forward-end
 
-# history incremental search
-bindkey "^R" history-incremental-search-backward
+bindkey '^R' history-incremental-pattern-search-backward
 bindkey "^S" history-incremental-search-forward
+
+# peco history search
+function peco-history-search() {
+  local tac
+  if which peco > /dev/null 2>&1; then
+    if which tac > /dev/null 2>&1; then
+      tac='tac'
+    elif which gtac > /dev/null 2>&1; then
+      tac='gtac'
+    else
+      tac='tail -r'
+    fi
+    BUFFER=$(\history -n 1 | eval $tac | peco --query "$LBUFFER")
+    CURSOR=$#BUFFER
+    zle clear-screen
+  fi
+}
+
+if which peco > /dev/null 2>&1; then
+  zle -N peco-history-search
+  bindkey '^R' peco-history-search
+fi
 
 
 ########################################
@@ -154,14 +175,6 @@ setopt correct
 zstyle ':completion:*:default' menu select=1
 export ZLS_COLORS=$LS_COLORS
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
-
-
-########################################
-# キーバインド
-########################################
-
-# ^R で履歴検索をするときに * でワイルドカードを使用出来るようにする
-bindkey '^R' history-incremental-pattern-search-backward
 
 
 ########################################
