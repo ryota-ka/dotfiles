@@ -259,6 +259,13 @@ inoremap <C-d> <delete>
 vnoremap j gj
 vnoremap k gk
 
+vnoremap <C-a> <Home>
+vnoremap <C-e> <End>
+vnoremap <C-b> <Left>
+vnoremap <C-f> <Right>
+vnoremap <C-n> <Down>
+vnoremap <C-p> <UP>
+
 "----------------------------------------
 " コマンドモード
 "----------------------------------------
