@@ -126,6 +126,10 @@ set shiftwidth=2
 set expandtab
 set smarttab
 set autoindent
+set smartindent
+
+set cursorline
+set cursorcolumn
 
 " ハイライトを有効にする
 if &t_Co > 2 || has('gui_running')
