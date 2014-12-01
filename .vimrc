@@ -239,6 +239,11 @@ nnoremap <silent><C-n> <Down>
 nnoremap <silent><C-p> <Up>
 nnoremap <silent><C-k> d$
 
+nnoremap <silent><C-]> g<C-]>
+
+nnoremap <Esc>b b
+nnoremap <Esc>f w
+
 "----------------------------------------
 " 挿入モード
 "----------------------------------------
@@ -552,4 +557,3 @@ if !has('gui_running')
   set ttimeout
   set timeoutlen=100
 endif
-
