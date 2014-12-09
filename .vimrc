@@ -474,13 +474,6 @@ nnoremap ;e :<C-u>VimFiler -buffer-name=explorer -split -simple -winwidth=35 -to
 
 
 "----------------------------------------
-" PHP 設定
-"----------------------------------------
-
-autocmd BufRead */dev/new-attendance/* setl noexpandtab
-
-
-"----------------------------------------
 "その他設定
 "----------------------------------------
 
