@@ -20,6 +20,8 @@
   dfc = diff --cached
 [merge]
   ff = false
+[pull]
+  ff = only
 [core]
   editor = /usr/local/bin/vim
 [credential]
