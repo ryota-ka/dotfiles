@@ -9,6 +9,7 @@
 [alias]
   lg = log --oneline --graph --decorate
   co = checkout
+  cob = checkout -b
   cm = commit -m
   cma = commit --amend
   st = status
