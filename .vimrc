@@ -537,13 +537,9 @@ nnoremap <silent><C-w><C-l> <C-w>l
 nnoremap <silent><C-w>h :new<CR>
 nnoremap <silent><C-w>v :vnew<CR><C-w>x<C-w>l
 
-" yank all lines
-nnoremap <silent>ya :%y+<CR>
-
 nnoremap <silent>;n :noh<CR>
 
-nnoremap <silent><C-i> bi
-" nnoremap <silent><C-a> ea
+
 
 if !has('gui_running')
   set notimeout
