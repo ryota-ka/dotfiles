@@ -1,6 +1,7 @@
-set nocompatible
-scriptencoding cp932
+set encoding=utf-8
+scriptencoding utf-8
 
+set nocompatible
 
 "----------------------------------------
 " システム設定
