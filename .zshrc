@@ -189,11 +189,14 @@ alias mv='mv -i'
 
 alias mkdir='mkdir -p'
 
+alias grep='grep --colour=auto'
+
+alias p='popd'
+
 # sudo の後のコマンドでエイリアスを有効にする
 alias sudo='sudo '
 
 # グローバルエイリアス
-alias -g grep='grep --colour=auto'
 alias -g grepc='grep --colour=always'
 alias -g less='less -R'
 
