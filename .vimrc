@@ -1,7 +1,12 @@
+if &compatible
+  set nocompatible
+endif
+
+
 set encoding=utf-8
 scriptencoding utf-8
 
-set nocompatible
+set fileencodings=utf-8,cp932,euc-jp,iso-2022-jp,latin1
 
 "----------------------------------------
 " システム設定
