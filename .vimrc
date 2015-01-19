@@ -389,6 +389,7 @@ function! s:LoadBundles()
   NeoBundle 'alpaca-tc/alpaca_tags'
   NeoBundle 'AndrewRadev/switch.vim'
   NeoBundle 'vim-scripts/ruby-matchit'
+  NeoBundle 'wting/rust.vim'
 endfunction
 
 function! s:InitNeoBundle()
