@@ -2,7 +2,7 @@
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 # zsh-comlpletions の設定
-fpath=(/usr/local/Cellar/zsh-completions/0.10.0/share/zsh-completions $fpath)
+fpath=(/usr/local/share/zsh-completions $fpath)
 
 # site-functions の設定
 fpath=(/usr/local/share/zsh/site-functions $fpath)
