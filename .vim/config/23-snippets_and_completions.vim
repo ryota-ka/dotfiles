@@ -29,7 +29,7 @@ if has('lua') && (v:version > 702 || (v:version == 703 && has('patch885')))
           \ 'default' : '',
           \ 'vimshell' : $HOME.'/.vimshell_hist',
           \ 'scheme' : $HOME.'/.gosh_completions',
-          \ 'ruby' : $DOTVIM.'/dict/ruby.dict'
+          \ 'ruby' : $HOME.'/.vim/dict/ruby.dict'
           \ }
 
     if !exists('g:neocomplete#keyword_patterns')
