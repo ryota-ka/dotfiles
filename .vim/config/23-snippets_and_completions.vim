@@ -41,12 +41,8 @@ if has('lua') && (v:version > 702 || (v:version == 703 && has('patch885')))
       \ "\<Plug>(neosnippet_expand_or_jump)"
       \ : (pumvisible() ? "\<C-n>\<C-p>" : "\<TAB>")
     inoremap <expr><CR>  pumvisible() ? "\<C-n>\<C-p>" . neocomplete#close_popup() : "\<CR>"
-    inoremap <expr><Esc> pumvisible() ? neocomplete#close_popup() : "\<Esc>"
+    inoremap <expr><C-c> pumvisible() ? neocomplete#smart_close_popup() : "\<C-c>"
     inoremap <expr><C-l> neocomplete#complete_common_string()
-    inoremap <expr><C-g> neocomplete#undo_completion()
-    inoremap <expr><C-h> neocomplete#smart_close_popup() . "\<C-h>"
-    inoremap <expr><BS>  neocomplete#smart_close_popup() . "\<C-h>"
-    inoremap <expr><C-y> neocomplete#close_popup()
 
     let g:neocomplete#enable_auto_select = 1
 
