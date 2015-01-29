@@ -13,7 +13,7 @@ vnoremap k gk
 
 nnoremap <C-]> g<C-]>
 
-nnoremap <silent><C-c><C-c> :noh<CR>
+nnoremap <silent><C-c> :noh<CR>
 
 nnoremap + <C-a>
 nnoremap - <C-x>
