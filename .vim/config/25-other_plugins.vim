@@ -1,7 +1,7 @@
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'Shougo/vimfiler.vim'
-NeoBundle 'h1mesuke/unite-outline'
 NeoBundle 'shawncplus/phpcomplete.vim'
+NeoBundle 'Shougo/unite-outline'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'alpaca-tc/alpaca_tags'
