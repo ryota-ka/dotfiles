@@ -1,7 +1,10 @@
 NeoBundleLazy 'Shougo/unite.vim', {
       \   'autoload': {'commands': ['Unite']}
-      \  }
+      \ }
 NeoBundleLazy 'Shougo/neomru.vim', {
+      \   'autoload': {'commands': ['Unite']}
+      \ }
+NeoBundleLazy 'Shougo/unite-outline', {
       \   'autoload': {'commands': ['Unite']}
       \ }
 
