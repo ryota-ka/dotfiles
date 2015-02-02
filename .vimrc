@@ -188,12 +188,6 @@ augroup END
 "その他設定
 "----------------------------------------
 
-" Reload all buffers
-" nnoremap <silent>;r :bufdo e<CR>
-
-" Enable syntax highlighting
-" nnoremap <silent>;s :syntax on<CR>
-
 " disable q:, q/, q?
  nnoremap q: :
  nnoremap q/ <Nop>
