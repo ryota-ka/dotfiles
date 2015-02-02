@@ -25,5 +25,6 @@
   ff = only
 [core]
   editor = /usr/local/bin/vim
+  pager = less -R
 [credential]
   helper = osxkeychain
