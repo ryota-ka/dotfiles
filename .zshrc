@@ -18,11 +18,7 @@ SAVEHIST=1000000
 
 # プロンプト
 local pr_cd="[%~]     %1(v|%F{green}%1v%f|)";
-if [ $SSH_CONNECTION ];then
-  local pr_info="%F{197}%n@%m%f";
-else
-local pr_info="%F{208}%n@%m%f";
-fi
+local pr_info="%(?.%F{208}%}.%F{197})%n@%m%f"
 PROMPT="
 $pr_cd
 $pr_info %# ";
