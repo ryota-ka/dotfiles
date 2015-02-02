@@ -5,5 +5,7 @@ NeoBundle 'tpope/vim-rails'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'alpaca-tc/alpaca_tags'
 NeoBundle 'AndrewRadev/switch.vim'
-NeoBundle 'vim-scripts/ruby-matchit'
+NeoBundleLazy 'vim-scripts/ruby-matchit', {
+      \   'autoload': {'filetype': ['ruby']}
+      \ }
 NeoBundle 'kana/vim-smartinput'
