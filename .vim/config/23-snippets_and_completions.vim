@@ -40,7 +40,9 @@ if has('lua') && (v:version > 702 || (v:version == 703 && has('patch885')))
     imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
       \ "\<Plug>(neosnippet_expand_or_jump)"
       \ : (pumvisible() ? "\<C-n>\<C-p>" : "\<TAB>")
-    inoremap <expr><CR>  pumvisible() ? "\<C-n>\<C-p>" . neocomplete#close_popup() : "\<CR>"
+    imap <expr><CR> neosnippet#expandable_or_jumpable() ?
+      \ "\<Plug>(neosnippet_expand_or_jump)"
+      \ : (pumvisible() ? "\<C-n>\<C-p>" : "\<CR>")
     inoremap <expr><C-c> pumvisible() ? neocomplete#smart_close_popup() : "\<C-c>"
     inoremap <expr><C-l> neocomplete#complete_common_string()
 
