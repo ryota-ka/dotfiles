@@ -7,7 +7,6 @@ NeoBundle 'Shougo/vimproc.vim', {
       \     'unix' : 'gmake',
       \    },
       \ }
-NeoBundle 'mattn/emmet-vim'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'itchyny/lightline.vim'

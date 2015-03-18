@@ -9,3 +9,7 @@ NeoBundleLazy 'vim-scripts/ruby-matchit', {
       \   'autoload': {'filetype': ['ruby']}
       \ }
 NeoBundle 'kana/vim-smartinput'
+NeoBundleLazy 'mattn/emmet-vim', {
+      \   'autoload': {'filetype': ['html']}
+      \ }
+
