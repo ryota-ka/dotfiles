@@ -129,14 +129,12 @@ setopt auto_cd
 
 # cd したら自動的にpushdする
 setopt auto_pushd
+
 # 重複したディレクトリを追加しない
 setopt pushd_ignore_dups
 
 # = の後はパス名として補完する
 setopt magic_equal_subst
-
-# 同時に起動したzshの間でヒストリを共有する
-setopt share_history
 
 # 同じコマンドをヒストリに残さない
 setopt hist_ignore_all_dups
