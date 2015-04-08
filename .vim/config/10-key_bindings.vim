@@ -17,3 +17,5 @@ nnoremap <silent><C-c> :noh<CR>
 
 nnoremap + <C-a>
 nnoremap - <C-x>
+
+inoremap jj <Esc>
