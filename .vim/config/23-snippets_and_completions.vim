@@ -22,7 +22,7 @@ if has('lua') && (v:version > 702 || (v:version == 703 && has('patch885')))
     let g:acp_enableAtStartup = 0
     let g:neocomplete#enable_at_startup = 1
     let g:neocomplete#enable_smart_case = 1
-    let g:neocomplete#sources#syntax#min_keyword_length = 1
+    let g:neocomplete#sources#syntax#min_keyword_length = 3
     let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
 
     let g:neocomplete#sources#dictionary#dictionaries = {
@@ -40,13 +40,10 @@ if has('lua') && (v:version > 702 || (v:version == 703 && has('patch885')))
     imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
       \ "\<Plug>(neosnippet_expand_or_jump)"
       \ : (pumvisible() ? "\<C-n>\<C-p>" : "\<TAB>")
-    imap <expr><CR> neosnippet#expandable_or_jumpable() ?
-      \ "\<Plug>(neosnippet_expand_or_jump)"
-      \ : (pumvisible() ? "\<C-n>\<C-p>" : "\<CR>")
     inoremap <expr><C-c> pumvisible() ? neocomplete#smart_close_popup() : "\<C-c>"
     inoremap <expr><C-l> neocomplete#complete_common_string()
 
-    let g:neocomplete#enable_auto_select = 1
+    let g:neocomplete#enable_auto_select = 0
 
     set omnifunc=syntaxcomplete#Complete
     autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
