@@ -17,8 +17,8 @@ HISTSIZE=1000000
 SAVEHIST=1000000
 
 # プロンプト
-local pr_cd="[%~]     %1(v|%F{green}%1v%f|)";
-local pr_info="%(?.%F{208}%}.%F{197})%n@%m%f"
+local pr_cd="%F{cyan}[%~]%f     %1(v|%F{green}%1v%f|)";
+local pr_info="%(?.%F{yellow}%}.%F{magenta})%n@%m%f"
 PROMPT="
 $pr_cd
 $pr_info %# ";
