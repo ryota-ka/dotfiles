@@ -1,6 +1,6 @@
-let s:tmux = system("which tmux > /dev/null 2>&1 && echo 'tmux found'")
+let s:tmux = system("which tmux >/dev/null 2>&1; echo $?")
 
-if s:tmux != ''
+if s:tmux == '0'
   augroup tmux
     autocmd!
     autocmd VimEnter,BufReadPost,FileReadPost,BufNewFile,BufEnter,InsertEnter * call s:tmux_rename_window()
