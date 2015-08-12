@@ -48,6 +48,6 @@ endfunction
 function! s:split_line_text_at_cursor()
   let line_text = getline(line('.'))
   let text_after_cursor  = line_text[col('.')-1 :]
-  let text_before_cursor = (col('.') > 1) ? line_text[: col('.')-2] : ''
+  let text_before_cursor = (col('.') > 1) ? line_text[: col('.') - 2] : ''
   return [text_before_cursor, text_after_cursor]
 endfunction
