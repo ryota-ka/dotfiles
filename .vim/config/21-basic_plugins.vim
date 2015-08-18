@@ -1,17 +1,16 @@
 NeoBundle 'Shougo/vimproc.vim', {
       \ 'build' : {
       \     'windows' : 'tools\\update-dll-mingw',
-      \     'cygwin' : 'make -f make_cygwin.mak',
-      \     'mac' : 'make -f make_mac.mak',
-      \     'linux' : 'make',
-      \     'unix' : 'gmake',
+      \     'cygwin'  : 'make -f make_cygwin.mak',
+      \     'mac'     : 'make -f make_mac.mak',
+      \     'linux'   : 'make',
+      \     'unix'    : 'gmake',
       \    },
       \ }
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tomasr/molokai'
-NeoBundle 'itchyny/lightline.vim'
 NeoBundleLazy 'thinca/vim-ref', {
-      \     'autoload': {'commands': ['Ref']}
+      \     'autoload': { 'commands': ['Ref'] }
       \  }
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'editorconfig/editorconfig-vim'
