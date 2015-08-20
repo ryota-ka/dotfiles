@@ -1,0 +1,1 @@
+NeoBundle 'itchyny/lightline.vim'
