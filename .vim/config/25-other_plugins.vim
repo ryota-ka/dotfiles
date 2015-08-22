@@ -8,9 +8,7 @@ NeoBundleLazy 'vim-scripts/ruby-matchit', {
       \   'autoload': {'filetype': ['ruby']}
       \ }
 NeoBundle 'kana/vim-smartinput'
-NeoBundleLazy 'mattn/emmet-vim', {
-      \   'autoload': {'filetype': ['html']}
-      \ }
+NeoBundle 'mattn/emmet-vim'
 
 NeoBundle "tyru/caw.vim.git"
 nmap <Leader>c <Plug>(caw:i:toggle)
