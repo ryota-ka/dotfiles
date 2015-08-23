@@ -5,6 +5,7 @@ NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'rust-lang/rust.vim'
 NeoBundle 'toyamarinyon/vim-swift'
+NeoBundle 'toml-lang/toml'
 
 " syntastic rubocop
 let g:syntastic_mode_map = { 'mode': 'passive',
