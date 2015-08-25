@@ -39,6 +39,8 @@ zstyle ':zle:*' word-style unspecified
 autoload -Uz compinit
 compinit
 
+zstyle ':completion:*' list-colors ''
+
 # 補完で小文字でも大文字にマッチさせる
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
@@ -51,6 +53,8 @@ zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin \
 
 # ps コマンドのプロセス名補完
 zstyle ':completion:*:processes' command 'ps x -o pid,s,args'
+
+zstyle ':completion:*' use-cache true
 
 # enable zmv
 autoload -Uz zmv
