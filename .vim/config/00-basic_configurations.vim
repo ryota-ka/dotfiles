@@ -49,7 +49,7 @@ endif
 augroup recover_cursor_position
   autocmd!
   autocmd BufReadPost *
-    \ if line("'\"") > 1 && line("'\"") <= line('$') |
+    \ if &filetype != 'gitcommit' && line("'\"") > 1 && line("'\"") <= line('$') |
     \   exe "normal! g`\"" |
     \ endif
 augroup END
