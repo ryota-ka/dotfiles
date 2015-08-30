@@ -1,0 +1,3 @@
+[[plugins]]
+repository = 'Shougo/unite.vim'
+commands = ['Unite']

@@ -1,0 +1,8 @@
+[[plugins]]
+repository = 'shawncplus/phpcomplete.vim'
+
+[[plugins]]
+repository = 'tpope/vim-fugitive'
+
+[[plugins]]
+repository = 'mattn/emmet-vim'

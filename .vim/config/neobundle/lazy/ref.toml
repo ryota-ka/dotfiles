@@ -1,0 +1,3 @@
+[[plugins]]
+repository = 'thinka/vim-ref'
+commands = ['Ref']

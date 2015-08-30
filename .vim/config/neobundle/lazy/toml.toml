@@ -1,0 +1,3 @@
+[[plugins]]
+repository = 'cespare/vim-toml'
+filetypes = ['toml']

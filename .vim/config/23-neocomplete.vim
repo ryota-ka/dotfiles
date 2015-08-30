@@ -1,21 +1,6 @@
-NeoBundleLazy 'Shougo/neosnippet.vim', {
-      \     'autoload': {'insert': 1}
-      \   }
-NeoBundleLazy 'Shougo/neosnippet-snippets', {
-      \     'autoload': {'insert': 1}
-      \  }
-
-let s:bundle = neobundle#get("neosnippet.vim")
-function! s:bundle.hooks.on_source(bundle)
-  if has('conceal')
-    set conceallevel=2 concealcursor=i
-  endif
-endfunction
-unlet s:bundle
-
 if has('lua') && (v:version > 702 || (v:version == 703 && has('patch885')))
   NeoBundleLazy 'Shougo/neocomplete.vim', {
-        \     'autoload': {'insert': 1}
+        \     'autoload': { 'insert': 1 }
         \  }
   let s:bundle = neobundle#get("neocomplete.vim")
   function! s:bundle.hooks.on_source(bundle)
@@ -59,5 +44,4 @@ if has('lua') && (v:version > 702 || (v:version == 703 && has('patch885')))
     endif
     let g:neocomplete#sources#omni#input_patterns.ruby = '[^. *\t]\.\h\w*\|\h\w*::'
   endfunction
-  unlet s:bundle
 endif

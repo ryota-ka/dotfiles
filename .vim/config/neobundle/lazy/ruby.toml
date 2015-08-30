@@ -1,0 +1,10 @@
+[[plugins]]
+repository = 'tpope/vim-endwise'
+filetypes = ['ruby']
+
+[[plugins]]
+repository = 'tpope/vim-rails'
+
+[[plugins]]
+repository = 'vim-scripts/ruby-matchit'
+filetypes = ['ruby']
