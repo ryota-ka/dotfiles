@@ -1,30 +1,23 @@
+[alias]
+  br = branch
+  co = checkout
+  cm = commit -m
+  cma = commit --amend
+  dfc = diff --cached
+  lg = log --oneline --graph --decorate
+  st = status
+[color]
+  ui = auto
+[core]
+  editor = vim
+  pager = less -R
 [filter "media"]
   clean = git-media-clean %f
   smudge = git-media-smudge %f
-[user]
-  name = Ryota Kameoka
-  email = kameoka.ryota@gmail.com
-[color]
-  ui = auto
-[alias]
-  lg = log --oneline --graph --decorate
-  co = checkout
-  cob = checkout -b
-  cm = commit -m
-  cma = commit --amend
-  st = status
-  br = branch
-  ft = fetch
-  bri = browse -- issues
-  brp = browse -- pulls
-  pr = "!sh -c 'hub pull-request -i $1 -b $2' -"
-  dfc = diff --cached
 [merge]
   ff = false
 [pull]
   ff = only
-[core]
-  editor = /usr/local/bin/vim
-  pager = less -R
-[credential]
-  helper = osxkeychain
+[user]
+  name = Ryota Kameoka
+  email = kameoka.ryota@gmail.com
