@@ -32,7 +32,7 @@ set formatoptions+=mM
 set virtualedit=block
 
 " allow backspacing over auto indent and the start of insert
-set backspace=indent,start
+set backspace=eol,indent,start
 
 " use enhanced command-line completion
 set wildmenu wildmode=list:longest
