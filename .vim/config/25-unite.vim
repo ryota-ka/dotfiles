@@ -1,8 +1,8 @@
 nnoremap [unite] <Nop>
 nmap     <Space>u [unite]
 
-nnoremap <silent> [unite]f :<C-u>VimFilerBufferDir-split -simple -winwidth=35 -no-quit<CR>
-nnoremap <silent> [unite]b :<C-u>Unite buffer<CR>
+nnoremap <silent> [unite]f :<C-u>Unite file -buffer-name=files -winwidth=35<CR>
+nnoremap <silent> [unite]b :<C-u>Unite -buffer-name=buffer buffer<CR>
 nnoremap <silent> [unite]r :<C-u>Unite -buffer-name=register register<CR>
 nnoremap <silent> [unite]h :<C-u>Unite file_mru<CR>
 nnoremap <silent> [unite]c :<C-u>Unite bookmark<CR>
@@ -24,4 +24,5 @@ function! s:unite_my_settings()
   inoremap <silent><buffer><expr> <C-v> unite#do_action('vsplit')
 endfunction
 
+let g:unite_enable_start_insert=1
 let g:unite_source_history_yank_enable = 1

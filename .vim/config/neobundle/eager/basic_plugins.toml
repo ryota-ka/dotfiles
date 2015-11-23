@@ -27,6 +27,3 @@ repository = 'itchyny/lightline.vim'
 
 [[plugins]]
 repository = "tyru/caw.vim"
-
-[[plugins]]
-repository = 'Shougo/vimfiler.vim'
