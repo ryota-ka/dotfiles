@@ -4,9 +4,6 @@ set number
 " don't give the intro message when starting Vim
 set shortmess+=I
 
-" highlight the screen line of the cursor
-set cursorline
-
 " display ^ for tabs, ~ for trailing spaces
 set list
 set listchars=tab:^\ ,trail:~
