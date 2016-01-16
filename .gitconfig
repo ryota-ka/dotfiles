@@ -18,6 +18,8 @@
   ff = false
 [pull]
   ff = only
+[rebase]
+  autostash = true
 [user]
   name = Ryota Kameoka
   email = kameoka.ryota@gmail.com
