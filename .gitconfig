@@ -19,6 +19,7 @@
 [pull]
   ff = only
 [rebase]
+  autosquash = true
   autostash = true
 [user]
   name = Ryota Kameoka
