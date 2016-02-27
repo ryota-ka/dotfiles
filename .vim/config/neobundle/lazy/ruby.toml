@@ -4,6 +4,7 @@ filetypes = ['ruby']
 
 [[plugins]]
 repository = 'tpope/vim-rails'
+filetypes = ['ruby']
 
 [[plugins]]
 repository = 'vim-scripts/ruby-matchit'
