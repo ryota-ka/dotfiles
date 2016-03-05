@@ -1,7 +1,0 @@
-[[plugins]]
-repository = 'Shougo/neosnippet.vim'
-insert = 1
-
-[[plugins]]
-repository = 'Shougo/neosnippet-snippets'
-insert = 1

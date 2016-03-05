@@ -1,0 +1,47 @@
+[[plugins]]
+repo = 'Shougo/neocomplete.vim'
+insert = 1
+
+[[plugins]]
+repo = 'Shougo/neosnippet.vim'
+insert = 1
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+insert = 1
+
+[[plugins]]
+repo = 'itchyny/vim-haskell-indent'
+filetypes = ['haskell']
+
+[[plugins]]
+repo = 'eagletmt/ghcmod-vim'
+filetypes = ['haskell']
+
+[[plugins]]
+repo = 'othree/html5.vim'
+filetypes = ['html']
+
+[[plugins]]
+repo = 'tpope/vim-endwise'
+filetypes = ['ruby']
+
+[[plugins]]
+repo = 'tpope/vim-rails'
+filetypes = ['haml', 'ruby']
+
+[[plugins]]
+repo = 'vim-scripts/ruby-matchit'
+filetypes = ['ruby']
+
+[[plugins]]
+repo = 'scrooloose/syntastic'
+filetypes = ['coffee', 'haskell', 'html', 'javascript', 'json', 'ruby', 'scss', 'sh', 'vim']
+
+[[plugins]]
+repo = 'cespare/vim-toml'
+filetypes = ['toml']
+
+[[plugins]]
+repo = 'Shougo/unite.vim'
+commands = ['Unite']

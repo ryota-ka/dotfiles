@@ -1,3 +1,0 @@
-[[plugins]]
-repository = 'rust-lang/rust.vim'
-filetypes = ['rust']

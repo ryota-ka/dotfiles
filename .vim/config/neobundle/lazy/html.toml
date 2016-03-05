@@ -1,3 +1,0 @@
-[[plugins]]
-repository = 'othree/html5.vim'
-filetypes = ['html']

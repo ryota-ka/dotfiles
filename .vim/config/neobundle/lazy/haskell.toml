@@ -1,3 +1,0 @@
-[[plugins]]
-repository = 'itchyny/vim-haskell-indent'
-filetypes = ['haskell']

@@ -1,8 +1,0 @@
-[[plugins]]
-repository = 'marcus/rsense'
-filetypes = ['ruby']
-
-[[plugins]]
-repository = 'supermomonga/neocomplete-rsense.vim'
-depends = ['Shougo/neocomplete.vim', 'marcus/rsense']
-filetypes = ['ruby']

@@ -1,3 +1,0 @@
-[[plugins]]
-repository = 'scrooloose/syntastic'
-filetypes = ['coffee', 'html', 'javascript', 'json', 'ruby', 'scss', 'sh', 'vim']

@@ -1,9 +1,5 @@
-if has('lua') && (v:version > 702 || (v:version == 703 && has('patch885')))
-  NeoBundleLazy 'Shougo/neocomplete.vim', {
-        \     'autoload': { 'insert': 1 }
-        \  }
-  let s:bundle = neobundle#get("neocomplete.vim")
-  function! s:bundle.hooks.on_source(bundle)
+if dein#tap('neocomplete.vim')
+  function! s:neocomplete_on_source() abort
     let g:acp_enableAtStartup = 0
     let g:neocomplete#enable_at_startup = 1
     let g:neocomplete#enable_smart_case = 1

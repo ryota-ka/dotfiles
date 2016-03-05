@@ -1,6 +1,5 @@
 .vim/backup/*
 .vim/bundle/*
-!.vim/bundle/neobundle.vim
 .vim/undo/*
 .config
 !.config/fish/*
