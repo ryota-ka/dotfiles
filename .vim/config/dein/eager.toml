@@ -33,3 +33,6 @@ repo = 'airblade/vim-gitgutter'
 
 [[plugins]]
 repo = 'mattn/emmet-vim'
+
+[[plugins]]
+repo = 'itchyny/vim-cursorword'
