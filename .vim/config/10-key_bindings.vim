@@ -12,8 +12,6 @@ nnoremap <C-]> g<C-]>
 
 nnoremap <silent><C-c> :noh<CR>
 
-inoremap <silent>jj <Esc>
-
 nnoremap r<C-c> <Nop>
 
 inoremap <Nul> <Nop>
