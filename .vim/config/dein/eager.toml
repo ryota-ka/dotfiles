@@ -35,4 +35,7 @@ repo = 'airblade/vim-gitgutter'
 repo = 'mattn/emmet-vim'
 
 [[plugins]]
+repo = 'itchyny/vim-parenmatch'
+
+[[plugins]]
 repo = 'itchyny/vim-cursorword'
