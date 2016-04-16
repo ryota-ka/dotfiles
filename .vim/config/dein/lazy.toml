@@ -45,3 +45,7 @@ on_ft = ['toml']
 [[plugins]]
 repo = 'Shougo/unite.vim'
 on_cmd = ['Unite']
+
+[[plugins]]
+repo = 'tpope/vim-rails'
+on_ft = ['ruby']
