@@ -5,6 +5,7 @@ let g:syntastic_mode_map = {
       \ 'mode': 'passive',
       \ 'active_filetypes': [
       \   'coffee',
+      \   'haskell',
       \   'html',
       \   'javascript',
       \   'json',
@@ -17,6 +18,7 @@ let g:syntastic_mode_map = {
 
 let g:syntastic_coffee_checkers = ['coffeelint']
 let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_haskell_checkers = ['hlint']
 let g:syntastic_python_checkers = ['pep8']
 let g:syntastic_ruby_checkers = ['rubocop']
 let g:syntastic_scss_checkers = ['scss_lint']
