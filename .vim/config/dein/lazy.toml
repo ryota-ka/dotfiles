@@ -19,7 +19,7 @@ repo = 'eagletmt/ghcmod-vim'
 on_ft = ['haskell']
 
 [[plugins]]
-repo = 'eagletmt/neco-ghc'
+repo = 'mkasa/neco-ghc-lushtags'
 on_ft = ['haskell']
 
 [[plugins]]
