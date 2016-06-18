@@ -11,6 +11,8 @@
 [core]
   editor = vim
   pager = less -R
+[diff]
+  compactionHeuristic = true
 [filter "media"]
   clean = git-media-clean %f
   smudge = git-media-smudge %f
