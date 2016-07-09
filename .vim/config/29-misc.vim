@@ -3,6 +3,6 @@ if dein#tap('caw.vim')
   vmap <Leader>c <Plug>(caw:i:toggle)
 endif
 
-if dein#tap('itchyny/vim-parenmatch')
+if dein#tap('vim-parenmatch')
   let g:loaded_matchparen = 1
 endif
