@@ -7,3 +7,5 @@ augroup ruby_configuration
    let g:rspec_command = 'Dispatch bundle exec rspec {spec}'
   endif
 augroup END
+
+let g:rsenseUseOmniFunc = 1

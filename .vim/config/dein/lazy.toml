@@ -35,10 +35,6 @@ repo = 'vim-scripts/ruby-matchit'
 on_ft = ['ruby']
 
 [[plugins]]
-repo = 'osyo-manga/vim-monster'
-on_ft = ['ruby']
-
-[[plugins]]
 repo = 'scrooloose/syntastic'
 on_ft = ['coffee', 'haskell', 'html', 'javascript', 'json', 'ruby', 'scss', 'sh', 'vim']
 
@@ -61,4 +57,8 @@ on_ft = ['ruby']
 
 [[plugins]]
 repo = 'todesking/ruby_hl_lvar.vim'
+on_ft = ['ruby']
+
+[[plugins]]
+repo = 'marcus/rsense'
 on_ft = ['ruby']
