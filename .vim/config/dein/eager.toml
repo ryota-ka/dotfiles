@@ -42,3 +42,6 @@ repo = 'itchyny/vim-cursorword'
 
 [[plugins]]
 repo = 'tpope/vim-dispatch'
+
+[[plugins]]
+repo = 'rust-lang/rust.vim'
