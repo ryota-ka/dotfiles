@@ -45,3 +45,6 @@ repo = 'tpope/vim-dispatch'
 
 [[plugins]]
 repo = 'rust-lang/rust.vim'
+
+[[plugins]]
+repo = 'terryma/vim-expand-region'
