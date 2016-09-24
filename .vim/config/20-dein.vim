@@ -20,7 +20,9 @@ if dein#check_install()
   call dein#install()
 endif
 
-
-filetype plugin indent on
+" enable syntax highlighting and filetype detection
+if &t_Co > 2
+  syntax on
+endif
 
 colorscheme molokai

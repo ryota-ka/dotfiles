@@ -43,11 +43,6 @@ set autoread
 " display only part of long lines
 set nowrap
 
-" syntax highlighting
-if &t_Co > 2
-  syntax on
-endif
-
 " recover cursor position on opening a file
 augroup recover_cursor_position
   autocmd!
