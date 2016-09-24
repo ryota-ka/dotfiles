@@ -39,3 +39,6 @@ repo = 'terryma/vim-expand-region'
 
 [[plugins]]
 repo = 'Shougo/neomru.vim'
+
+[[plugins]]
+repo = 'Shougo/vimfiler.vim'
