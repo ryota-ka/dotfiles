@@ -36,3 +36,6 @@ repo = 'tpope/vim-dispatch'
 
 [[plugins]]
 repo = 'terryma/vim-expand-region'
+
+[[plugins]]
+repo = 'Shougo/neomru.vim'
