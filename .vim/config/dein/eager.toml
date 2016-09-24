@@ -8,9 +8,6 @@ repo = 'Shougo/vimproc.vim'
   unix = 'make -f make_unix.mak'
 
 [[plugins]]
-repo = 'kana/vim-smartinput'
-
-[[plugins]]
 repo = 'tpope/vim-surround'
 
 [[plugins]]
@@ -18,9 +15,6 @@ repo = 'tomasr/molokai'
 
 [[plugins]]
 repo = 'thinca/vim-quickrun'
-
-[[plugins]]
-repo = 'editorconfig/editorconfig-vim'
 
 [[plugins]]
 repo = 'itchyny/lightline.vim'
@@ -32,9 +26,6 @@ repo = "tyru/caw.vim"
 repo = 'airblade/vim-gitgutter'
 
 [[plugins]]
-repo = 'mattn/emmet-vim'
-
-[[plugins]]
 repo = 'itchyny/vim-parenmatch'
 
 [[plugins]]
@@ -42,9 +33,6 @@ repo = 'itchyny/vim-cursorword'
 
 [[plugins]]
 repo = 'tpope/vim-dispatch'
-
-[[plugins]]
-repo = 'rust-lang/rust.vim'
 
 [[plugins]]
 repo = 'terryma/vim-expand-region'

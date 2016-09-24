@@ -62,3 +62,16 @@ on_ft = ['ruby']
 [[plugins]]
 repo = 'marcus/rsense'
 on_ft = ['ruby']
+
+[[plugins]]
+repo = 'editorconfig/editorconfig-vim'
+on_i = 1
+
+[[plugins]]
+repo = 'kana/vim-smartinput'
+on_i = 1
+
+[[plugins]]
+repo = 'mattn/emmet-vim'
+on_i = 1
+on_ft = ['html', 'haml']
