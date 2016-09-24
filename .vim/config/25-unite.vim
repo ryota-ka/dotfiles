@@ -1,10 +1,10 @@
 nnoremap [unite] <Nop>
 nmap     <Space>u [unite]
 
-nnoremap <silent> [unite]f :<C-u>Unite file -buffer-name=files -winwidth=35<CR>
-nnoremap <silent> [unite]b :<C-u>Unite -buffer-name=buffer buffer<CR>
+nnoremap <silent> [unite]f :<C-u>UniteWithBufferDir file -buffer-name=files -winwidth=35 -default-action=tabopen<CR>
+nnoremap <silent> [unite]b :<C-u>Unite -buffer-name=buffer buffer -default-action=tabopen<CR>
 nnoremap <silent> [unite]r :<C-u>Unite -buffer-name=register register<CR>
-nnoremap <silent> [unite]h :<C-u>Unite file_mru<CR>
+nnoremap <silent> [unite]h :<C-u>Unite file_mru -default-action=tabopen<CR>
 nnoremap <silent> [unite]c :<C-u>Unite bookmark<CR>
 nnoremap <silent> [unite]t : <C-u>Unite tab<CR>
 
