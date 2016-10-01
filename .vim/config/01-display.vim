@@ -19,3 +19,6 @@ set ambiwidth=double
 
 " don't redraw the screen while executing macros
 set lazyredraw
+
+" limit the maximum number of items in the popup menu for Insert mode completion
+set pumheight=10
