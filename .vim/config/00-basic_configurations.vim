@@ -35,7 +35,7 @@ set virtualedit=block
 set backspace=eol,indent,start
 
 " use enhanced command-line completion
-set wildmenu wildmode=list:longest
+set wildmenu wildmode=full
 
 " automatically reload file when it is detected to have been changed outside of Vim
 set autoread
