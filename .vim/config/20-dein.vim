@@ -25,4 +25,6 @@ if &t_Co > 2
   syntax on
 endif
 
+filetype plugin indent on
+
 colorscheme molokai
