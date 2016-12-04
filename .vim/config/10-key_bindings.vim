@@ -15,3 +15,6 @@ nnoremap <silent><C-c> :noh<CR>
 nnoremap r<C-c> <Nop>
 
 inoremap <Nul> <Nop>
+
+cnoremap <C-n> <Down>
+cnoremap <C-p> <Up>
