@@ -43,6 +43,9 @@ set autoread
 " display only part of long lines
 set nowrap
 
+" set the number of history lines that are remembered
+set history=2000
+
 " recover cursor position on opening a file
 augroup recover_cursor_position
   autocmd!
