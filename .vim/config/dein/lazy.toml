@@ -35,10 +35,6 @@ repo = 'vim-scripts/ruby-matchit'
 on_ft = ['ruby']
 
 [[plugins]]
-repo = 'scrooloose/syntastic'
-on_ft = ['coffee', 'haskell', 'html', 'javascript', 'json', 'ruby', 'scss', 'sh', 'vim']
-
-[[plugins]]
 repo = 'cespare/vim-toml'
 on_ft = ['toml']
 
