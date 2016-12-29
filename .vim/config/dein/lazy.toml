@@ -79,3 +79,7 @@ on_ft = ['html', 'haml']
 [[plugins]]
 repo = 'rust-lang/rust.vim'
 on_ft = ['rust']
+
+[[plugins]]
+repo = 'posva/vim-vue'
+on_ft = ['vue']
