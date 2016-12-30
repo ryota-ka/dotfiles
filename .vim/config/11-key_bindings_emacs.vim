@@ -9,12 +9,12 @@ xnoremap <C-e> <End>
 cnoremap <C-e> <End>
 
 nnoremap <C-b> <Left>
-inoremap <C-b> <Left>
+inoremap <C-b> <C-g>U<Left>
 xnoremap <C-b> <Left>
 cnoremap <C-b> <Left>
 
 nnoremap <C-f> <Right>
-inoremap <C-f> <Right>
+inoremap <C-f> <C-g>U<Right>
 xnoremap <C-f> <Right>
 cnoremap <C-f> <Right>
 
