@@ -56,10 +56,6 @@ repo = 'tpope/vim-rails'
 on_ft = ['ruby']
 
 [[plugins]]
-repo = 'todesking/ruby_hl_lvar.vim'
-on_ft = ['ruby']
-
-[[plugins]]
 repo = 'marcus/rsense'
 on_ft = ['ruby']
 
