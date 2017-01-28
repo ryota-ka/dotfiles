@@ -37,3 +37,8 @@ augroup syntastic_rubocop_rails
         \ let b:syntastic_ruby_rubocop_options = '--rails' |
         \ endif
 augroup END
+
+let g:ale_linters = {
+\   'haml': ['haml-lint'],
+\   'javascript': ['eslint'],
+\}
