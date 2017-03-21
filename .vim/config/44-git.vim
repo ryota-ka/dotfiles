@@ -5,7 +5,7 @@ augroup git_configuration
 augroup END
 
 if dein#tap('vim-gitgutter')
-  nnoremap ghn :GitGutterNextHunk<CR>
-  nnoremap ghp :GitGutterPrevHunk<CR>
+  nnoremap ]h :GitGutterNextHunk<CR>
+  nnoremap [h :GitGutterPrevHunk<CR>
   nnoremap ghs :GitGutterStageHunk<CR>
 endif
