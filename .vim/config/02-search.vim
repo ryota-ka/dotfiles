@@ -12,3 +12,7 @@ set incsearch
 
 " highlight matches
 set hlsearch
+
+if has('nvim')
+  set inccommand=split
+endif
