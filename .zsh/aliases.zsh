@@ -1,0 +1,7 @@
+alias cp='cp -i'
+alias grep='grep --colour=auto'
+alias la='ls -A'
+alias ll='ls -lh'
+alias mv='mv -i'
+alias p='popd'
+alias vim='nvim'
