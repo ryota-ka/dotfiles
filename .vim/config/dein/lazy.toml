@@ -75,3 +75,7 @@ on_ft = ['rust']
 [[plugins]]
 repo = 'posva/vim-vue'
 on_ft = ['vue']
+
+[[plugins]]
+repo = 'uarun/vim-protobuf'
+on_ft = ['proto']
