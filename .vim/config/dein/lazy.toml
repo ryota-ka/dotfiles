@@ -79,3 +79,7 @@ on_ft = ['vue']
 [[plugins]]
 repo = 'uarun/vim-protobuf'
 on_ft = ['proto']
+
+[[plugins]]
+repo = 'vim-scripts/vim-stylus'
+on_ft = ['stylus']
