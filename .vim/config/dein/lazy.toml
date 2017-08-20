@@ -1,5 +1,5 @@
 [[plugins]]
-repo = 'Shougo/neocomplete.vim'
+repo = 'Shougo/deoplete.nvim'
 on_i = 1
 
 [[plugins]]
