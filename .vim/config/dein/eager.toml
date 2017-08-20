@@ -48,3 +48,6 @@ repo = 'Shougo/denite.nvim'
 
 [[plugins]]
 repo = 'w0rp/ale'
+
+[[plugins]]
+repo = 'tpope/vim-repeat'
