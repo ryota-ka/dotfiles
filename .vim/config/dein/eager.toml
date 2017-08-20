@@ -51,3 +51,6 @@ repo = 'w0rp/ale'
 
 [[plugins]]
 repo = 'tpope/vim-repeat'
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
