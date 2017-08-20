@@ -44,4 +44,7 @@ repo = 'Shougo/neomru.vim'
 repo = 'Shougo/vimfiler.vim'
 
 [[plugins]]
+repo = 'Shougo/denite.nvim'
+
+[[plugins]]
 repo = 'w0rp/ale'
