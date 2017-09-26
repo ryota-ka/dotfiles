@@ -16,6 +16,7 @@ nnoremap <silent> [denite]f :<C-u>DeniteProjectDir `WithGit('file_rec')` file:ne
 nnoremap <silent> [denite]g :<C-u>DeniteProjectDir `WithGit('grep')`
       \ -auto-preview
       \ -buffer-name=grep
+      \ -no-empty
       \ -vertical-preview
       \ <CR>
 
