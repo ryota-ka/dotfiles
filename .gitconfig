@@ -26,3 +26,5 @@
 [user]
   name = Ryota Kameoka
   email = kameoka.ryota@gmail.com
+[rerere]
+  enabled = true
