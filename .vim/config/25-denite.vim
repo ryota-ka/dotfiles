@@ -9,19 +9,16 @@ nnoremap <silent> [denite]b :<C-u>Denite buffer
 nnoremap <silent> [denite]f :<C-u>DeniteProjectDir `WithGit('file_rec')`
       \ -auto-preview
       \ -buffer-name=files
-      \ -default-action=tabswitch
       \ <CR>
 
 nnoremap <silent> [denite]g :<C-u>DeniteProjectDir `WithGit('grep')`
       \ -auto-preview
       \ -buffer-name=grep
-      \ -default-action=tabswitch
       \ <CR>
 
 nnoremap <silent> [denite]h :<C-u>Denite file_old
       \ -auto-preview
       \ -buffer-name=oldfile
-      \ -default-action=tabswitch
       \ <CR>
 
 nnoremap <silent> [denite]l :<C-u>Denite line
@@ -40,7 +37,6 @@ nnoremap <silent> [denite]r :<C-u>Denite register
 
 nnoremap <silent> [denite]t :<C-u>Denite tag
       \ -auto-preview
-      \ -default-action=tabswitch
       \ <CR>
 
 call denite#custom#option('_', 'split', 'tab')
