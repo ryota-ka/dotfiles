@@ -3,7 +3,6 @@ nmap <Space> [denite]
 
 nnoremap <silent> [denite]b :<C-u>Denite buffer
       \ -buffer-name=buffer
-      \ -resume
       \ -unique
       \ <CR>
 
@@ -11,7 +10,6 @@ nnoremap <silent> [denite]f :<C-u>DeniteProjectDir `WithGit('file_rec')`
       \ -auto-preview
       \ -buffer-name=files
       \ -default-action=tabswitch
-      \ -resume
       \ <CR>
 
 nnoremap <silent> [denite]g :<C-u>DeniteProjectDir `WithGit('grep')`
@@ -24,7 +22,6 @@ nnoremap <silent> [denite]h :<C-u>Denite file_old
       \ -auto-preview
       \ -buffer-name=oldfile
       \ -default-action=tabswitch
-      \ -resume
       \ <CR>
 
 nnoremap <silent> [denite]l :<C-u>Denite line
@@ -35,7 +32,6 @@ nnoremap <silent> [denite]l :<C-u>Denite line
 nnoremap <silent> [denite]o :<C-u>Denite outline
       \ -auto-preview
       \ -buffer-name=outline
-      \ -resume
       \ <CR>
 
 nnoremap <silent> [denite]r :<C-u>Denite register
