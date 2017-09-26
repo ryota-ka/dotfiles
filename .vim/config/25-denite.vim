@@ -4,6 +4,7 @@ nmap <Space> [denite]
 nnoremap <silent> [denite]b :<C-u>Denite buffer
       \ -buffer-name=buffer
       \ -resume
+      \ -unique
       \ <CR>
 
 nnoremap <silent> [denite]f :<C-u>DeniteProjectDir `WithGit('file_rec')`
