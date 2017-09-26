@@ -21,7 +21,6 @@ inoremap <C-k> <C-r>=<SID>kill_line()<CR>
 inoremap <C-h> <BS>
 cnoremap <C-h> <BS>
 
-cnoremap <C-d> <Del>
 
 function! s:kill_line()
   let [text_before_cursor, text_after_cursor] = s:split_line_text_at_cursor()
