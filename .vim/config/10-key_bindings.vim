@@ -18,3 +18,6 @@ inoremap <Nul> <Nop>
 
 cnoremap <C-n> <Down>
 cnoremap <C-p> <Up>
+
+nnoremap + <C-a>
+nnoremap - <C-x>
