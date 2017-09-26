@@ -59,6 +59,8 @@ highlight DeniteMatchedChar ctermfg=white
 call denite#custom#map('normal', 'M', '<denite:move_to_middle>', 'noremap')
 call denite#custom#map('normal', 's', '<denite:do_action:splitswitch>', 'noremap')
 call denite#custom#map('normal', 'v', '<denite:do_action:vsplitswitch>', 'noremap')
+call denite#custom#map('normal', '<C-n>', '<denite:move_to_next_line>', 'noremap')
+call denite#custom#map('normal', '<C-p>', '<denite:move_to_previous_line>', 'noremap')
 call denite#custom#map('insert', '<C-a>', '<Home>')
 call denite#custom#map('insert', '<C-b>', '<Left>')
 call denite#custom#map('insert', '<C-e>', '<End>')
