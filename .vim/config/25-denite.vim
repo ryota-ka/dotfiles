@@ -9,6 +9,7 @@ nnoremap <silent> [denite]b :<C-u>Denite buffer
 nnoremap <silent> [denite]f :<C-u>DeniteProjectDir `WithGit('file_rec')` file:new
       \ -auto-preview
       \ -buffer-name=files
+      \ -source-names=hide
       \ -vertical-preview
       \ <CR>
 
