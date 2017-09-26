@@ -49,6 +49,11 @@ nnoremap <silent> [denite]t :<C-u>Denite tag
 
 call denite#custom#option('_', 'split', 'tab')
 call denite#custom#option('_', 'prompt', '>')
+call denite#custom#option('_', 'highlight_mode_insert', 'WildMenu')
+call denite#custom#option('_', 'highlight_matched_char', 'DeniteMatchedChar')
+call denite#custom#option('_', 'highlight_matched_range', 'Normal')
+
+highlight DeniteMatchedChar ctermfg=white
 
 " custom key mappings
 call denite#custom#map('normal', 'M', '<denite:move_to_middle>', 'noremap')
