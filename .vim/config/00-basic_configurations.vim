@@ -37,6 +37,9 @@ set backspace=eol,indent,start
 " use enhanced command-line completion
 set wildmenu wildmode=full
 
+" ignore case on ex-mode completion
+set wildignorecase
+
 " automatically reload file when it is detected to have been changed outside of Vim
 set autoread
 
