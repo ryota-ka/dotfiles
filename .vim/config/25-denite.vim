@@ -48,6 +48,7 @@ nnoremap <silent> [denite]t :<C-u>Denite tag
       \ <CR>
 
 call denite#custom#option('_', 'split', 'tab')
+call denite#custom#option('_', 'prompt', '>')
 
 " custom key mappings
 call denite#custom#map('normal', 'M', '<denite:move_to_middle>', 'noremap')
