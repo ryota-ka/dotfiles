@@ -26,5 +26,8 @@
 [user]
   name = Ryota Kameoka
   email = kameoka.ryota@gmail.com
+  signingkey = B3A90912D6C9D2AE
+[gpg]
+  program = gpg
 [rerere]
   enabled = true
