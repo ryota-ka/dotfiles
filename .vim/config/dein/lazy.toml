@@ -81,10 +81,6 @@ repo = 'vim-scripts/vim-stylus'
 on_ft = ['stylus']
 
 [[plugins]]
-repo = 'Quramy/tsuquyomi'
-on_ft = ['typescript']
-
-[[plugins]]
 repo = 'HerringtonDarkholme/yats.vim'
 on_ft = ['typescript']
 

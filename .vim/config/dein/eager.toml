@@ -57,3 +57,6 @@ repo = 'tpope/vim-fugitive'
 
 [[plugins]]
 repo = 'metakirby5/codi.vim'
+
+[[plugins]]
+repo = 'autozimu/LanguageClient-neovim'
