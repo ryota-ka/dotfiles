@@ -57,3 +57,7 @@ augroup recover_cursor_position
     \   exe "normal! g`\"" |
     \ endif
 augroup END
+
+if has('mouse')
+  set mouse=a
+end
