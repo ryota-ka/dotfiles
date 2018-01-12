@@ -10,7 +10,7 @@ vnoremap k gk
 
 nnoremap <C-]> g<C-]>
 
-nnoremap <silent><C-c> :noh<CR>
+nnoremap <silent><Esc> :noh<CR>
 
 nnoremap r<C-c> <Nop>
 
