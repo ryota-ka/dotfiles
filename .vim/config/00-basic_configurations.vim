@@ -58,6 +58,8 @@ augroup recover_cursor_position
     \ endif
 augroup END
 
+set signcolumn=yes
+
 if has('mouse')
   set mouse=a
 end
