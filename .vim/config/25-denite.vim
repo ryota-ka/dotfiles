@@ -76,7 +76,7 @@ call denite#custom#var('file_rec/git', 'command', ['git', 'ls-files', '-co', '--
 
 " grep/git using git-grep
 call denite#custom#alias('source', 'grep/git', 'grep')
-call denite#custom#var('grep/git', 'command', ['git', 'grep', '-I'])
+call denite#custom#var('grep/git', 'command', ['git', 'grep', '-I', '--untracked'])
 call denite#custom#var('grep/git', 'recursive_opts', [])
 
 function! WithGit(source)
