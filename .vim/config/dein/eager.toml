@@ -23,9 +23,6 @@ repo = 'itchyny/vim-parenmatch'
 repo = 'itchyny/vim-cursorword'
 
 [[plugins]]
-repo = 'terryma/vim-expand-region'
-
-[[plugins]]
 repo = 'Shougo/neomru.vim'
 
 [[plugins]]
