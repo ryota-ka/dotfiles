@@ -48,10 +48,6 @@ depends = ['vim-dispatch']
 on_ft = ['ruby']
 
 [[plugins]]
-repo = 'tpope/vim-rails'
-on_ft = ['ruby', 'haml']
-
-[[plugins]]
 repo = 'editorconfig/editorconfig-vim'
 on_i = 1
 
