@@ -43,11 +43,6 @@ repo = 'tsukkee/unite-tag'
 on_cmd = ['Unite']
 
 [[plugins]]
-repo = 'thoughtbot/vim-rspec'
-depends = ['vim-dispatch']
-on_ft = ['ruby']
-
-[[plugins]]
 repo = 'editorconfig/editorconfig-vim'
 on_i = 1
 
