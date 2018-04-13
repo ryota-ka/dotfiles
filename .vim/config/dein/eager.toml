@@ -32,9 +32,6 @@ repo = 'itchyny/vim-parenmatch'
 repo = 'itchyny/vim-cursorword'
 
 [[plugins]]
-repo = 'tpope/vim-dispatch'
-
-[[plugins]]
 repo = 'terryma/vim-expand-region'
 
 [[plugins]]
