@@ -1,1 +1,1 @@
-export FZF_DEFAULT_OPTS='--reverse'
+export FZF_DEFAULT_OPTS='--reverse --bind=ctrl-space:toggle'
