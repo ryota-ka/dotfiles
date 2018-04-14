@@ -28,5 +28,3 @@ link:
 
 update:
 	@git pull origin master --quiet
-	@git submodule update --init --quiet
-	@git submodule foreach --quiet git pull origin master --quiet
