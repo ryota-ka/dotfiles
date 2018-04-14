@@ -58,6 +58,9 @@ augroup recover_cursor_position
     \ endif
 augroup END
 
+" refresh screen on every 250ms
+set updatetime=250
+
 set signcolumn=yes
 
 if has('mouse')
