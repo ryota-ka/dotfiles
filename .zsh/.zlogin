@@ -22,3 +22,4 @@ alias zmv='noglob zmv -W'
 . $ZDOTDIR/syntax_highlighting.zsh
 . $ZDOTDIR/tmux.zsh
 . $ZDOTDIR/ls.zsh
+. $ZDOTDIR/fzf.zsh
