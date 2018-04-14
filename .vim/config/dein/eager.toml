@@ -50,6 +50,12 @@ repo = 'autozimu/LanguageClient-neovim'
 repo = 'ujihisa/neco-look'
 
 [[plugins]]
+repo = 'scrooloose/nerdtree'
+
+[[plugins]]
+repo = 'Xuyuanp/nerdtree-git-plugin'
+
+[[plugins]]
 repo = 'junegunn/fzf'
 build = './install --all'
 merged = 0
