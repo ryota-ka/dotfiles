@@ -1,48 +1,20 @@
-nnoremap [denite] <Nop>
-nmap <Space> [denite]
-
-nnoremap <silent> [denite]b :<C-u>Denite buffer
-      \ -buffer-name=buffer
-      \ -unique
-      \ <CR>
-
-nnoremap <silent> [denite]f :<C-u>DeniteProjectDir `WithGit('file_rec')` file:new
-      \ -auto-preview
-      \ -buffer-name=files
-      \ -source-names=hide
-      \ -vertical-preview
-      \ <CR>
-
-nnoremap <silent> [denite]g :<C-u>DeniteProjectDir `WithGit('grep')`
-      \ -auto-preview
-      \ -buffer-name=grep
-      \ -no-empty
-      \ -vertical-preview
-      \ <CR>
-
-nnoremap <silent> [denite]h :<C-u>Denite file_old
+nnoremap <silent> <Space>h :<C-u>Denite file_old
       \ -auto-preview
       \ -buffer-name=oldfile
       \ -vertical-preview
       \ <CR>
 
-nnoremap <silent> [denite]l :<C-u>Denite line
-      \ -auto-preview
-      \ -buffer-name=line
-      \ -vertical-preview
-      \ <CR>
-
-nnoremap <silent> [denite]o :<C-u>Denite outline
+nnoremap <silent> <Space>o :<C-u>Denite outline
       \ -auto-preview
       \ -buffer-name=outline
       \ -vertical-preview
       \ <CR>
 
-nnoremap <silent> [denite]r :<C-u>Denite register
+nnoremap <silent> <Space>r :<C-u>Denite register
       \ -buffer-name=register
       \<CR>
 
-nnoremap <silent> [denite]t :<C-u>Denite tag
+nnoremap <silent> <Space>t :<C-u>Denite tag
       \ -auto-preview
       \ -vertical-preview
       \ <CR>
