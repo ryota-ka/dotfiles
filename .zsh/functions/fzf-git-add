@@ -1,0 +1,8 @@
+fzf-git-add() {
+  local files="$(git status --porcelain | awk '{ print $2 }' | fzf -m --preview 'git diff --color=always -- $(git rev-parse --show-cdup){}')"
+
+  if [ -n "$files" ]; then
+    BUFFER="git add $(echo $files | sed -e "s|^|$(git rev-parse --show-cdup)|" | tr '\n' ' ')"
+    CURSOR=#BUFFER
+  fi
+}
