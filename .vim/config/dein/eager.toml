@@ -47,6 +47,9 @@ repo = 'metakirby5/codi.vim'
 repo = 'autozimu/LanguageClient-neovim'
 
 [[plugins]]
+repo = 'ujihisa/neco-look'
+
+[[plugins]]
 repo = 'junegunn/fzf'
 build = './install --all'
 merged = 0
