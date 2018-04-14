@@ -5,8 +5,6 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
 Plug 'cespare/vim-toml', { 'for': 'toml' }
-Plug 'eagletmt/ghcmod-vim', { 'for': 'haskell' }
-Plug 'eagletmt/neco-ghc', { 'for': 'haskell' }
 Plug 'editorconfig/editorconfig-vim'
 Plug 'haskell/haskell-ide-engine', { 'for': 'haskell' }
 Plug 'HerringtonDarkholme/yats.vim', { 'for': 'typescript' }
