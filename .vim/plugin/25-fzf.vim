@@ -8,6 +8,8 @@ if HasPlugin('fzf.vim')
   nnoremap <silent> <Space>f :GFiles -co --exclude-standard<CR>
   nnoremap <silent> <Space>g :GGrep<CR>
   nnoremap <silent> <Space>l :Line<CR>
+  nnoremap <silent> <Space>h :History<CR>
+  nnoremap <silent> <Space>t :Tags<CR>
 
   let g:fzf_buffers_jump = 1
 
