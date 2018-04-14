@@ -11,7 +11,7 @@ install: install-deps install-vim-plug update link
 
 install-deps:
 	@echo 'Installing Python 3 for neovim...'
-	@brew install python3
+	@brew install python
 	@pip install --upgrade neovim
 	@echo 'Installing reattach-to-user-namespace for tmux...'
 	@brew install reattach-to-user-namespace
