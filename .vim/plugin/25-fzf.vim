@@ -5,7 +5,7 @@ if HasPlugin('fzf.vim')
     \   { 'dir': systemlist('git rev-parse --show-toplevel')[0] }, <bang>0)
 
   nnoremap <silent> <Space>b :Buffers<CR>
-  nnoremap <silent> <Space>f :GFiles<CR>
+  nnoremap <silent> <Space>f :GFiles -co --exclude-standard<CR>
   nnoremap <silent> <Space>g :GGrep<CR>
   nnoremap <silent> <Space>l :Line<CR>
 
