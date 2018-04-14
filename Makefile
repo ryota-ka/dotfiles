@@ -7,13 +7,18 @@ clean:
 	@$(foreach f, $(FILES), rm -fv $(HOME)/$(f);)
 	@rm -fv ~/.config/nvim/init.vim
 
-install: install-deps update link
+install: install-deps install-vim-plug update link
 
 install-deps:
 	@echo 'Installing Python 3 for neovim...'
 	@brew install python3
 	@pip install --upgrade neovim
 	@echo 'Installing reattach-to-user-namespace for tmux...'
+	@brew install reattach-to-user-namespace
+
+install-vim-plug:
+	@echo 'Installing vim-plug...'
+	@curl -sS -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 link:
 	@echo 'Linking dotfiles...'
