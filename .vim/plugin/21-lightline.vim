@@ -1,3 +1,5 @@
-let g:lightline = {
-      \ 'colorscheme': 'solarized'
-      \ }
+if HasPlugin('lightline.vim')
+  let g:lightline = {
+        \ 'colorscheme': 'solarized'
+        \ }
+endif
