@@ -10,7 +10,7 @@
   ui = auto
 [core]
   editor = vim
-  pager = less -R
+  pager = diff-highlight | less -R
 [diff]
   compactionHeuristic = true
 [filter "media"]
@@ -31,3 +31,5 @@
   program = gpg
 [rerere]
   enabled = true
+[interactive]
+  diffFilter = diff-highlight

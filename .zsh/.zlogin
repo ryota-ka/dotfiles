@@ -23,3 +23,4 @@ alias zmv='noglob zmv -W'
 . $ZDOTDIR/tmux.zsh
 . $ZDOTDIR/ls.zsh
 . $ZDOTDIR/fzf.zsh
+. $ZDOTDIR/git.zsh
