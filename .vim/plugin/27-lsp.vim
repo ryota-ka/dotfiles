@@ -1,5 +1,5 @@
 let g:LanguageClient_serverCommands = {
-    \ 'typescript': ['javascript-typescript-stdio'],
+    \ 'typescript': ['typescript-language-server', '--stdio'],
     \ }
 
 autocmd FileType typescript LanguageClientStart
