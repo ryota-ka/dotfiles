@@ -21,7 +21,7 @@ Plug 'othree/html5.vim', { 'for': 'html' }
 Plug 'posva/vim-vue', { 'for': 'vue' }
 Plug 'purescript-contrib/purescript-vim', { 'for': 'purescript' }
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/neco-syntax'
@@ -44,6 +44,6 @@ Plug 'ujihisa/neco-look'
 Plug 'vim-scripts/ruby-matchit', { 'for': 'ruby' }
 Plug 'vim-scripts/vim-stylus', { 'for': 'stylus' }
 Plug 'w0rp/ale'
-Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }
 
 call plug#end()
