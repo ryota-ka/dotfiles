@@ -28,3 +28,5 @@ link:
 
 update:
 	@git pull origin master --quiet
+	@if (brew outdated | grep python); then brew upgrade python; fi
+	@pip3 install --upgrade neovim
