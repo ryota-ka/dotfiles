@@ -1,7 +1,7 @@
 fzf-git-checkout-branch() {
   local branches branch
-  branches=$(git branch --all | grep -v HEAD) &&
+  branches=$(git branch --all | grep -v HEAD | cut -c 3-) &&
   branch=$(echo "$branches" |
-           fzf -d $(( 2 + $(wc -l <<< "$branches") )) +m) &&
+    fzf -d $(( 2 + $(wc -l <<< "$branches") )) +m --preview "git diff --stat --color=always HEAD..{} -- $(git rev-parse --show-cdup)") &&
   git checkout $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
 }
