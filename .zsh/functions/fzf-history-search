@@ -1,3 +1,6 @@
 fzf-history-search() {
-  print -z $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf +s --tac | sed 's/ *[0-9]* *//')
+  local cmd=$( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf +s --tac | sed 's/ *[0-9]* *//')
+
+  BUFFER=$cmd
+  CURSOR=#BUFFER
 }
