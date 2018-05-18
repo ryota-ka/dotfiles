@@ -14,6 +14,12 @@ zstyle ':zle:*' word-style unspecified
 autoload -Uz zmv
 alias zmv='noglob zmv -W'
 
+if which nvim 2>&1 >/dev/null; then
+  export EDITOR=nvim
+else
+  export EDITOR=vim
+fi
+
 . $ZDOTDIR/completion.zsh
 . $ZDOTDIR/functions.zsh
 . $ZDOTDIR/history.zsh
