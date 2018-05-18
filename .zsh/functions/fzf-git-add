@@ -1,5 +1,5 @@
 fzf-git-add() {
-  local files="$(git status --porcelain | grep -e '^ ' -e '??' | awk '{ print $2 }' | fzf -m --preview 'git diff --color=always -- $(git rev-parse --show-cdup){} | diff-highlight')"
+  local files="$(git status --porcelain | egrep -v -e '^.{1} ' | awk '{ print $2 }' | fzf -m --preview 'git diff --color=always -- $(git rev-parse --show-cdup){} | diff-highlight')"
 
   if [ -n "$files" ]; then
     BUFFER="git add $(echo $files | sed -e "s|^|$(git rev-parse --show-cdup)|" | tr '\n' ' ')"
