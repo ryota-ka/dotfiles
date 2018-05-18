@@ -14,6 +14,7 @@ if which fzf > /dev/null; then
   load fzf-history-search '^R'
 
   load fzf-git-add '^G^A'
+  load fzf-git-unstage '^G^U'
 
   load fzf-git-checkout-branch
   alias gco=fzf-git-checkout-branch
