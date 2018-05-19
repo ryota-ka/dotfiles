@@ -17,5 +17,8 @@ if which fzf > /dev/null; then
   load fzf-git-unstage '^G^U'
 
   load fzf-git-checkout-branch
+
+  load fzf-git-ls-files-editor '^V'
+
   alias gco=fzf-git-checkout-branch
 fi
