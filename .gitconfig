@@ -33,3 +33,5 @@
   enabled = true
 [interactive]
   diffFilter = diff-highlight
+[push]
+  default = current
