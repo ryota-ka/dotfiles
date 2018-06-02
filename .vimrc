@@ -21,9 +21,9 @@ Plug 'metakirby5/codi.vim'
 Plug 'othree/html5.vim', { 'for': 'html' }
 Plug 'posva/vim-vue', { 'for': 'vue' }
 Plug 'purescript-contrib/purescript-vim', { 'for': 'purescript' }
+Plug 'roxma/nvim-completion-manager', { 'do': ':UpdateRemotePlugins' }
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/neco-syntax'
 Plug 'Shougo/neco-vim', { 'for': 'vim' }
 Plug 'Shougo/neomru.vim'
