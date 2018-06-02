@@ -16,7 +16,7 @@ Plug 'itchyny/vim-parenmatch'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'kana/vim-smartinput'
-Plug 'mattn/emmet-vim', { 'for': ['html', 'haml'] }
+Plug 'mattn/emmet-vim', { 'for': ['html', 'haml', 'typescript'] }
 Plug 'metakirby5/codi.vim'
 Plug 'othree/html5.vim', { 'for': 'html' }
 Plug 'posva/vim-vue', { 'for': 'vue' }
