@@ -45,6 +45,3 @@ setopt extended_glob
 
 # Unicode の正規化に関する問題を吸収
 setopt combining_chars
-
-# コマンド名が間違っていた場合に修正
-setopt correct
