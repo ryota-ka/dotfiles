@@ -13,10 +13,10 @@ load() {
 if which fzf > /dev/null; then
   load fzf-history-search '^R'
 
-  load fzf-git-add '^G^A'
-  load fzf-git-unstage '^G^U'
+  load fzf-git-add '^[g^[a'
+  load fzf-git-unstage '^[g^[u'
 
-  load fzf-git-checkout-branch
+  load fzf-git-checkout-branch '^[g^[b'
 
   load fzf-git-ls-files-editor '^V'
 
