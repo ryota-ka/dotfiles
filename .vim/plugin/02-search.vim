@@ -31,3 +31,5 @@ function! BlinkNextMatch() abort
   call matchdelete(id)
   redraw
 endfunction
+
+vnoremap / y/<C-r>"<CR>
