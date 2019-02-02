@@ -17,6 +17,7 @@
   clean = git-media-clean %f
   smudge = git-media-smudge %f
 [merge]
+  conflictStyle = diff3
   ff = false
 [pull]
   ff = only
