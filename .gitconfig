@@ -9,7 +9,7 @@
 [color]
   ui = auto
 [core]
-  editor = vim
+  editor = nvim
   pager = diff-highlight | less -R
 [diff]
   compactionHeuristic = true
