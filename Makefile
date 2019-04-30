@@ -1,4 +1,4 @@
-FILES := .gitconfig .gitconfig .tmux.conf .vim .vimrc .zsh .zshenv
+FILES := .gitconfig .gitignore_global .tmux.conf .vim .vimrc .zsh .zshenv
 
 all:
 

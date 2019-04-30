@@ -10,6 +10,7 @@
   ui = auto
 [core]
   editor = nvim
+  excludesfile = ~/.gitignore_global
   pager = diff-highlight | less -R
 [diff]
   compactionHeuristic = true

@@ -3,5 +3,5 @@
 .vim/undo/*
 .config
 !.config/fish/*
-.zcompdump
+.zsh/.zcompdump*
 .zcompcache
