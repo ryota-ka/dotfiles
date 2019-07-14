@@ -40,7 +40,6 @@ Plug 'tpope/vim-surround'
 Plug 'tsukkee/unite-tag', { 'on': 'Unite' }
 Plug 'tyru/caw.vim'
 Plug 'uarun/vim-protobuf', { 'for': 'proto' }
-Plug 'vim-scripts/ruby-matchit', { 'for': 'ruby' }
 Plug 'vim-scripts/vim-stylus', { 'for': 'stylus' }
 Plug 'w0rp/ale'
 Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }
