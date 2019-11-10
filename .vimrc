@@ -3,7 +3,6 @@ set runtimepath+=~/.vim
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'airblade/vim-gitgutter'
-Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
 Plug 'cespare/vim-toml', { 'for': 'toml' }
 Plug 'digitaltoad/vim-pug'
 Plug 'editorconfig/editorconfig-vim'
@@ -18,6 +17,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'kana/vim-smartinput'
 Plug 'mattn/emmet-vim', { 'for': ['html', 'haml', 'typescript'] }
 Plug 'metakirby5/codi.vim'
+Plug 'neoclide/coc.nvim', { 'do': { -> coc#util#install() } }
 Plug 'othree/html5.vim', { 'for': 'html' }
 Plug 'posva/vim-vue', { 'for': 'vue' }
 Plug 'purescript-contrib/purescript-vim', { 'for': 'purescript' }
