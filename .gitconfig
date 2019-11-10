@@ -29,6 +29,10 @@
   name = Ryota Kameoka
   email = kameoka.ryota@gmail.com
   signingkey = B3A90912D6C9D2AE
+[filter "lfs"]
+  required = true
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge %f
 [gpg]
   program = gpg
 [rerere]
