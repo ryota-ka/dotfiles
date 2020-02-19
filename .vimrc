@@ -33,7 +33,6 @@ Plug 'Shougo/unite.vim', { 'on': 'Unite' }
 Plug 'Shougo/vimfiler.vim'
 Plug 'thinca/vim-quickrun'
 Plug 'tomasr/molokai'
-Plug 'tpope/vim-endwise', { 'for': 'ruby' }
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
