@@ -25,6 +25,8 @@ link:
 	@$(foreach f, $(FILES), ln -fnsv $(abspath $(f)) $(HOME)/$(f);)
 	@mkdir -p ~/.config/nvim
 	@ln -fnsv $(abspath .vimrc) ~/.config/nvim/init.vim
+	@mkdir -p ~/.config/karabiner
+	@ln -fnsv $(abspath karabiner.json) ~/.config/karabiner/karabiner.json
 
 update:
 	@git pull origin master --quiet
