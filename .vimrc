@@ -21,7 +21,6 @@ Plug 'othree/html5.vim', { 'for': 'html' }
 Plug 'purescript-contrib/purescript-vim', { 'for': 'purescript' }
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'Shougo/neco-syntax'
 Plug 'Shougo/neco-vim', { 'for': 'vim' }
 Plug 'Shougo/neomru.vim'
 Plug 'Shougo/neosnippet-snippets'
