@@ -7,7 +7,6 @@ Plug 'cespare/vim-toml', { 'for': 'toml' }
 Plug 'digitaltoad/vim-pug'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'haskell/haskell-ide-engine', { 'for': 'haskell' }
-Plug 'HerringtonDarkholme/yats.vim', { 'for': 'typescript' }
 Plug 'itchyny/lightline.vim'
 Plug 'itchyny/vim-cursorword'
 Plug 'itchyny/vim-haskell-indent', { 'for': 'haskell' }
