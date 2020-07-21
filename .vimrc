@@ -22,7 +22,6 @@ Plug 'othree/html5.vim', { 'for': 'html' }
 Plug 'purescript-contrib/purescript-vim', { 'for': 'purescript' }
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'Shougo/unite.vim', { 'on': 'Unite' }
 Plug 'Shougo/vimfiler.vim'
 Plug 'SirVer/ultisnips'
 Plug 'thinca/vim-quickrun'
@@ -30,7 +29,6 @@ Plug 'tomasr/molokai'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
-Plug 'tsukkee/unite-tag', { 'on': 'Unite' }
 Plug 'tyru/caw.vim'
 Plug 'uarun/vim-protobuf', { 'for': 'proto' }
 Plug 'vim-scripts/vim-stylus', { 'for': 'stylus' }
