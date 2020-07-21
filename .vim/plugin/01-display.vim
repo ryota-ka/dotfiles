@@ -8,12 +8,6 @@ set shortmess+=I
 set list
 set listchars=tab:^\ ,trail:~
 
-" always display the status line
-set laststatus=2
-
-" show command in the last line of the screen
-set showcmd
-
 " use twice the width of ASCII characters for East Asian Width characters
 set ambiwidth=double
 
