@@ -13,6 +13,7 @@ Plug 'itchyny/vim-haskell-indent', { 'for': 'haskell' }
 Plug 'itchyny/vim-parenmatch'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'junegunn/vim-peekaboo'
 Plug 'kana/vim-smartinput'
 Plug 'mattn/emmet-vim', { 'for': ['html', 'haml', 'typescript'] }
 Plug 'metakirby5/codi.vim'
