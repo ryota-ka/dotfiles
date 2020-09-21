@@ -1,1 +1,1 @@
-autocmd BufRead,BufNewFile *.tsx setlocal filetype=typescript
+autocmd BufRead,BufNewFile *.tsx setlocal filetype=typescript.tsx
