@@ -32,6 +32,8 @@ link:
 	@$(foreach f, $(FILES), ln -fnsv $(abspath $(f)) $(HOME)/$(f);)
 	@mkdir -p ~/.config/nvim
 	@ln -fnsv $(abspath .vimrc) ~/.config/nvim/init.vim
+	@ln -fnsv $(abspath ./.vim/coc/package.json) ~/.config/coc/extensions/package.json
+	@ln -fnsv $(abspath ./.vim/coc/settings.json) ~/.config/nvim/coc-settings.json
 	@mkdir -p ~/.config/karabiner
 	@ln -fnsv $(abspath karabiner.json) ~/.config/karabiner/karabiner.json
 	@mkdir -p ~/.vim/backup

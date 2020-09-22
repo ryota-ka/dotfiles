@@ -1,0 +1,32 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": [
+    "javascript",
+    "typescript",
+    "typescriptreact"
+  ],
+  "diagnostic.virtualText": true,
+  "eslint.autoFixOnSave": true,
+  "git.addGBlameToBufferVar": true,
+  "git.showCommitInFloating": true,
+  "languageserver": {
+    "haskelll": {
+      "command": "haskell-language-server-wrapper",
+      "args": ["--lsp"],
+      "rootPatterns": [
+        "*.cabal",
+        "stack.yaml",
+        "cabal.project",
+        "package.yaml"
+      ],
+      "filetypes": [
+        "hs",
+        "lhs",
+        "haskell"
+      ],
+      "initializationOptions": {
+        "haskell": {
+        }
+      }
+    }
+  }
+}

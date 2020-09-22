@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "coc-dictionary": ">=1.2.2",
+    "coc-eslint": ">=1.2.7",
+    "coc-git": ">=1.8.1",
+    "coc-json": ">=1.2.6",
+    "coc-prettier": ">=1.1.17",
+    "coc-snippets": ">=2.1.28",
+    "coc-tsserver": ">=1.5.3",
+    "coc-word": ">=1.2.2"
+  }
+}
