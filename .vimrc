@@ -2,7 +2,6 @@ set runtimepath+=~/.vim
 
 call plug#begin('~/.local/share/nvim/plugged')
 
-Plug 'airblade/vim-gitgutter'
 Plug 'cespare/vim-toml', { 'for': 'toml' }
 Plug 'delphinus/vim-auto-cursorline'
 Plug 'digitaltoad/vim-pug'
