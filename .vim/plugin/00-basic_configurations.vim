@@ -16,7 +16,6 @@ set backupdir=$HOME/.vim/backup
 " persistent undo
 if version >= 703
   set undofile
-  set undodir=$HOME/.vim/undo
 endif
 
 " don't consider octal numbers when using the C-a / C-x command
