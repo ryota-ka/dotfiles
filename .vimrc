@@ -14,7 +14,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-peekaboo'
 Plug 'kana/vim-smartinput'
-Plug 'mattn/emmet-vim', { 'for': ['html', 'haml', 'typescript'] }
+Plug 'mattn/emmet-vim', { 'for': ['html', 'typescript.tsx'] }
 Plug 'metakirby5/codi.vim'
 Plug 'neoclide/coc.nvim', { 'do': { -> coc#util#install() } }
 Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
