@@ -9,7 +9,7 @@
   "git.addGBlameToBufferVar": true,
   "git.showCommitInFloating": true,
   "languageserver": {
-    "haskelll": {
+    "haskell": {
       "command": "haskell-language-server-wrapper",
       "args": ["--lsp"],
       "rootPatterns": [
