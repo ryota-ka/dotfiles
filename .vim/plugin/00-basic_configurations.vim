@@ -59,3 +59,7 @@ set signcolumn=yes
 if has('mouse')
   set mouse=a
 end
+
+" reload buffer when modified outside of Vim
+set autoread
+autocmd FocusGained,BufEnter * :checktime
