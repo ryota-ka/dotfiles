@@ -3,9 +3,6 @@ if &compatible
   set nocompatible
 endif
 
-" set the character encoding used inside Vim
-set encoding=utf-8
-
 " try to open a file with the following encodings
 set fileencodings=utf-8,cp932,euc-jp,iso-2022-jp,latin1
 
