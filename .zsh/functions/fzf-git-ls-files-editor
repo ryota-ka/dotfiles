@@ -1,5 +1,5 @@
 fzf-git-ls-files-editor() {
-  local files="$(git ls-files -co --exclude-standard | fzf -m --preview 'cat {}')"
+  local files="$(cat <(git status --short) <(git ls-files -co --exclude-standard | awk '{ print "   " $0 }') | fzf -m --preview 'cat {2}' | sed 's/^...//')"
 
   if [ -n "$files" ]; then
     $EDITOR $(echo $files | tr '\n' ' ') < /dev/tty
