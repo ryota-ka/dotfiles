@@ -5,6 +5,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'cespare/vim-toml', { 'for': 'toml' }
 Plug 'delphinus/vim-auto-cursorline'
 Plug 'digitaltoad/vim-pug'
+Plug 'easymotion/vim-easymotion'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'haskell/haskell-ide-engine', { 'for': 'haskell' }
 Plug 'itchyny/lightline.vim'
