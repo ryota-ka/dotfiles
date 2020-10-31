@@ -29,7 +29,6 @@ Plug 'SirVer/ultisnips'
 Plug 'thinca/vim-quickrun'
 Plug 'tomasr/molokai'
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tyru/caw.vim'
 Plug 'uarun/vim-protobuf', { 'for': 'proto' }
