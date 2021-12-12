@@ -26,7 +26,6 @@ fi
 . $ZDOTDIR/hooks.zsh
 . $ZDOTDIR/prompt.zsh
 . $ZDOTDIR/syntax_highlighting.zsh
-. $ZDOTDIR/tmux.zsh
 . $ZDOTDIR/ls.zsh
 . $ZDOTDIR/fzf.zsh
 . $ZDOTDIR/git.zsh
