@@ -9,6 +9,7 @@ in
     let
       exec = cmd: lib.hm.dag.entryAfter [ "writeBoundary" ] cmd;
       link = src: dest: exec ''
+        $DRY_RUN_CMD mkdir -p $VERBOSE_ARG ${builtins.dirOf dest}
         $DRY_RUN_CMD ln -fs $VERBOSE_ARG ${src} ${dest}
       '';
       mkdirp = dir: exec ''
