@@ -1,5 +1,3 @@
-set runtimepath+=~/.vim
-
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'cespare/vim-toml', { 'for': 'toml' }
@@ -11,7 +9,7 @@ Plug 'haskell/haskell-ide-engine', { 'for': 'haskell' }
 Plug 'itchyny/lightline.vim'
 Plug 'itchyny/vim-cursorword'
 Plug 'itchyny/vim-parenmatch'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-peekaboo'
 Plug 'kana/vim-smartinput'

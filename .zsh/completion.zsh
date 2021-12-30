@@ -1,8 +1,3 @@
-FPATH=/usr/local/share/zsh-completions:$FPATH
-FPATH=/usr/local/share/zsh/site-functions:$FPATH
-
-autoload -Uz compinit; compinit
-
 zstyle ':completion:*' verbose yes
 zstyle ':completion:*' completer _expand _complete _match _prefix _approximate _list
 

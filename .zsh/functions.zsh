@@ -1,5 +1,3 @@
-FPATH=$ZDOTDIR/functions:$FPATH
-
 autoload -Uz clean-up-swap-files
 
 load() {

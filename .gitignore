@@ -1,6 +1,1 @@
-.vim/bundle/*
-.vim/undo/*
-.config
-!.config/fish/*
-.zsh/.zcompdump*
-.zcompcache
+/result
