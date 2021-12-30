@@ -160,7 +160,9 @@ in
     dotDir = ".config/zsh";
     enableSyntaxHighlighting = true;
     envExtra = ''
-      . ~/.nix-profile/etc/profile.d/nix.sh
+      if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then
+        . ~/.nix-profile/etc/profile.d/nix.sh
+      fi
     '';
     history = {
       extended = true;
