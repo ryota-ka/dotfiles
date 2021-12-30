@@ -31,9 +31,6 @@ setopt hist_ignore_space
 # ヒストリに保存するときに余分なスペースを削除する
 setopt hist_reduce_blanks
 
-# ヒストリをインクリメンタルに追加する
-setopt inc_append_history
-
 # 補完候補が複数あるときに自動的に一覧表示する
 setopt auto_menu
 
