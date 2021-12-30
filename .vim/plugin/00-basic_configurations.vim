@@ -6,9 +6,9 @@ endif
 " try to open a file with the following encodings
 set fileencodings=utf-8,cp932,euc-jp,iso-2022-jp,latin1
 
-" save backup file in ~/.vim/backup
+" save backup file
 set backup
-set backupdir=$HOME/.vim/backup
+set backupdir-=.
 
 " persistent undo
 if version >= 703
