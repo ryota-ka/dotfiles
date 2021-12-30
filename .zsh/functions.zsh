@@ -19,6 +19,4 @@ if which fzf > /dev/null; then
   load fzf-git-checkout-branch '^[g^[b'
 
   load fzf-git-ls-files-editor '^V'
-
-  alias gco=fzf-git-checkout-branch
 fi
