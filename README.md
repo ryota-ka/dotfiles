@@ -11,4 +11,5 @@
 $ git clone https://github.com/ryota-ka/dotfiles.git
 $ cd ./dotfiles
 $ make switch
+$ nvim -c :PlugInstall
 ```
