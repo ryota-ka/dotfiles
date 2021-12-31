@@ -129,7 +129,7 @@ in
     extraConfig = ''
       set runtimepath+=${./vim}
       source ${pkgs.vimPlugins.vim-plug}/plug.vim
-      source ${./.vimrc}
+      source ${./vim/plugins.vim}
     '';
     vimAlias = true;
     vimdiffAlias = true;
