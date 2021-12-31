@@ -17,8 +17,8 @@ in
       '';
     in
     {
-      cocPackageJSON = link ./.vim/coc/package.json "${config.xdg.configHome}/coc/extensions/package.json";
-      cocSettingsJSON = link ./.vim/coc/settings.json "${config.xdg.configHome}/nvim/coc-settings.json";
+      cocPackageJSON = link ./vim/coc/package.json "${config.xdg.configHome}/coc/extensions/package.json";
+      cocSettingsJSON = link ./vim/coc/settings.json "${config.xdg.configHome}/nvim/coc-settings.json";
       karabinerJSON = link ./karabiner.json "${config.xdg.configHome}/karabiner/karabiner.json";
       neovimBackupDir = mkdirp "${config.xdg.dataHome}/nvim/backup";
       neovimUndoDir = mkdirp "${config.xdg.dataHome}/nvim/undo";
@@ -127,7 +127,7 @@ in
     enable = true;
 
     extraConfig = ''
-      set runtimepath+=${./.vim}
+      set runtimepath+=${./vim}
       source ${pkgs.vimPlugins.vim-plug}/plug.vim
       source ${./.vimrc}
     '';
