@@ -171,19 +171,19 @@ in
       size = 1000000;
     };
     loginExtra = ''
-      FPATH=${./.zsh/functions}:$FPATH
+      FPATH=${./zsh/functions}:$FPATH
 
       export FPATH
 
-      . ${./.zsh/completion.zsh}
-      . ${./.zsh/functions.zsh}
-      . ${./.zsh/history.zsh}
-      . ${./.zsh/hooks.zsh}
-      . ${./.zsh/ls.zsh}
-      . ${./.zsh/options.zsh}
-      . ${./.zsh/prompt.zsh}
-      . ${./.zsh/words.zsh}
-      . ${./.zsh/zmv.zsh}
+      . ${./zsh/completion.zsh}
+      . ${./zsh/functions.zsh}
+      . ${./zsh/history.zsh}
+      . ${./zsh/hooks.zsh}
+      . ${./zsh/ls.zsh}
+      . ${./zsh/options.zsh}
+      . ${./zsh/prompt.zsh}
+      . ${./zsh/words.zsh}
+      . ${./zsh/zmv.zsh}
     '';
     shellAliases = {
       cp = "cp -i";
