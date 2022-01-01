@@ -13,6 +13,7 @@ Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-peekaboo'
 Plug 'kana/vim-smartinput'
+Plug 'kshenoy/vim-signature'
 Plug 'LnL7/vim-nix'
 Plug 'mattn/emmet-vim', { 'for': ['html', 'typescript.tsx'] }
 Plug 'metakirby5/codi.vim'
