@@ -147,7 +147,7 @@ in
     '';
     historyLimit = 5000;
     keyMode = "vi";
-    newSession = true;
+    newSession = false;
     prefix = "C-j";
     shell = "${pkgs.zsh}/bin/zsh";
     terminal = "screen-256color";
