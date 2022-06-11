@@ -101,6 +101,7 @@ in
       rebase = {
         autosquash = true;
         autostash = true;
+        stat = true;
       };
       rerere = {
         enabled = true;
