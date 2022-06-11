@@ -160,6 +160,8 @@ in
     dotDir = ".config/zsh";
     enableSyntaxHighlighting = true;
     envExtra = ''
+      export NIX_PATH=$HOME/.nix-defexpr/channels
+
       if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then
         . ~/.nix-profile/etc/profile.d/nix.sh
       fi
