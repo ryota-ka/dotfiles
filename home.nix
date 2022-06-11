@@ -71,22 +71,26 @@ in
       lg = "log --oneline --graph --decorate";
       st = "status";
     };
+    delta = {
+      enable = true;
+      options = {
+        line-numbers = true;
+        navigate = true;
+        side-by-side = true;
+      };
+    };
     extraConfig = {
       color = {
         ui = "auto";
       };
       core = {
         editor = "${pkgs.neovim}/bin/nvim";
-        pager = "${diffHighlight} | less -R";
       };
       diff = {
         compactionHeuristic = true;
       };
       init = {
         defaultBranch = "master";
-      };
-      interactive = {
-        diffFilter = "${diffHighlight}";
       };
       merge = {
         conflictStyle = "diff3";
