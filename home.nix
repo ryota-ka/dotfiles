@@ -1,9 +1,5 @@
 { config, lib, pkgs, ... }:
 
-let
-  diffHighlight = "${pkgs.git}/share/git/contrib/diff-highlight/diff-highlight";
-in
-
 {
   home.activation =
     let
