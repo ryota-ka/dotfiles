@@ -84,7 +84,7 @@ in
         ui = "auto";
       };
       core = {
-        editor = "${pkgs.neovim}/bin/nvim";
+        editor = pkgs.lib.getExe pkgs.neovim;
       };
       diff = {
         compactionHeuristic = true;
@@ -154,7 +154,7 @@ in
     keyMode = "vi";
     newSession = false;
     prefix = "C-j";
-    shell = "${pkgs.zsh}/bin/zsh";
+    shell = pkgs.lib.getExe pkgs.zsh;
     terminal = "screen-256color";
   };
 
