@@ -161,6 +161,7 @@ in
   programs.zsh = {
     enable = true;
 
+    completionInit = "autoload -U compinit && compinit -u";
     defaultKeymap = "emacs";
     dotDir = ".config/zsh";
     enableSyntaxHighlighting = true;
