@@ -29,5 +29,6 @@
         }
       }
     }
-  }
+  },
+  "typescript.preferences.importModuleSpecifier": "relative"
 }
