@@ -22,6 +22,7 @@
   home.homeDirectory = builtins.getEnv "HOME";
   home.language.base = "en_US.UTF-8";
   home.packages = [
+    pkgs.delta
     pkgs.jetbrains-mono
     pkgs.niv
     pkgs.yarn
