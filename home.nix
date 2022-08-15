@@ -76,6 +76,9 @@
       };
     };
     extraConfig = {
+      advice = {
+        skippedCherryPicks = false;
+      };
       color = {
         ui = "auto";
       };
