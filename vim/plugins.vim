@@ -5,6 +5,7 @@ Plug 'delphinus/vim-auto-cursorline'
 Plug 'digitaltoad/vim-pug'
 Plug 'easymotion/vim-easymotion'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'hashivim/vim-terraform'
 Plug 'haskell/haskell-ide-engine', { 'for': 'haskell' }
 Plug 'itchyny/lightline.vim'
 Plug 'itchyny/vim-cursorword'
