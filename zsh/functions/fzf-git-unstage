@@ -1,5 +1,5 @@
 fzf-git-unstage() {
-  local files="$(git status --porcelain | grep -v '^ ' | grep -v '^??' | awk '{ print $2 }' | fzf -m --preview 'git diff --cached --color=always -- $(git rev-parse --show-cdup){} | diff-highlight')"
+  local files="$(git status --porcelain | grep -v '^ ' | grep -v '^??' | awk '{ print $2 }' | fzf -m --preview 'git diff --cached --color=always -- $(git rev-parse --show-cdup){} | delta')"
 
   if [ -n "$files" ]; then
     git reset HEAD $(echo $files | sed -e "s|^|$(git rev-parse --show-cdup)|" | tr '\n' ' ')
