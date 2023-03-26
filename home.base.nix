@@ -131,13 +131,16 @@
   programs.neovim = {
     enable = true;
 
-    extraConfig = ''
-      source ${pkgs.vimPlugins.vim-plug}/plug.vim
-      source ${./vim/plugins.vim}
-    '';
     extraLuaConfig = ''
       vim.opt.runtimepath:append('${./vim}')
+      require('plugins')
     '';
+    plugins = [
+      {
+        optional = false;
+        plugin = pkgs.vimPlugins.packer-nvim;
+      }
+    ];
     vimAlias = true;
     vimdiffAlias = true;
     withNodeJs = true;
