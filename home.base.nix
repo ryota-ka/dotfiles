@@ -132,9 +132,11 @@
     enable = true;
 
     extraConfig = ''
-      set runtimepath+=${./vim}
       source ${pkgs.vimPlugins.vim-plug}/plug.vim
       source ${./vim/plugins.vim}
+    '';
+    extraLuaConfig = ''
+      vim.opt.runtimepath:append('${./vim}')
     '';
     vimAlias = true;
     vimdiffAlias = true;
