@@ -1,7 +1,7 @@
 all: build
 
-build: home.base.nix
-	home-manager -f ./home.base.nix build
+build: home.nix
+	home-manager -f ./home.nix build
 
 switch: build
 	./result/activate
