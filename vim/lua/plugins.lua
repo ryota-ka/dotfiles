@@ -23,10 +23,18 @@ return require('packer').startup(function(use)
   use({ 'purescript-contrib/purescript-vim', ft = { 'purescript' } })
   use({ 'rust-lang/rust.vim', ft = { 'rust' } })
   use({ 'scrooloose/nerdtree', cmd = { 'NERDTreeFind', 'NERDTreeToggle' } })
+  use({
+    'sainnhe/sonokai',
+    config = function()
+      vim.g.sonokai_enable_italic = 1
+      vim.g.sonokai_float_style = 'dim'
+      vim.g.sonokai_transparent_background = 1
+      vim.cmd('colorscheme sonokai')
+    end,
+  })
   use({ 'Shougo/vimfiler.vim' })
   use({ 'SirVer/ultisnips' })
   use({ 'thinca/vim-quickrun' })
-  use({ 'tomasr/molokai' })
   use({ 'tpope/vim-fugitive' })
   use({ 'tpope/vim-surround' })
   use({ 'tyru/caw.vim' })
