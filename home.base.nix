@@ -83,9 +83,6 @@
       color = {
         ui = "auto";
       };
-      core = {
-        editor = pkgs.lib.getExe pkgs.neovim;
-      };
       diff = {
         compactionHeuristic = true;
       };
