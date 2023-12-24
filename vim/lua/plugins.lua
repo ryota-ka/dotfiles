@@ -15,6 +15,12 @@ return require('packer').startup(function(use)
   use({ 'kana/vim-smartinput' })
   use({ 'kshenoy/vim-signature' })
   use({
+    'kwkarlwang/bufresize.nvim',
+    config = function()
+      require('bufresize').setup()
+    end,
+  })
+  use({
     'kylechui/nvim-surround',
     config = function()
       require('nvim-surround').setup({})
