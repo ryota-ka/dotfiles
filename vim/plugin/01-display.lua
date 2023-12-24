@@ -4,12 +4,7 @@ vim.opt.number = true
 -- don't give the intro message when starting Vim
 vim.opt.shortmess:append('I')
 
--- display ^ for tabs, ~ for trailing spaces
 vim.opt.list = true
-vim.opt.listchars = {
-  tab = '^ ',
-  trail = '~',
-}
 
 -- use twice the width of ASCII characters for East Asian Width characters
 vim.opt.ambiwidth = 'double'
