@@ -14,6 +14,12 @@ return require('packer').startup(function(use)
   use({ 'junegunn/vim-peekaboo' })
   use({ 'kana/vim-smartinput' })
   use({ 'kshenoy/vim-signature' })
+  use({
+    'kylechui/nvim-surround',
+    config = function()
+      require('nvim-surround').setup({})
+    end
+  })
   use({ 'LnL7/vim-nix' })
   use({
     'lukas-reineke/indent-blankline.nvim',
@@ -87,7 +93,6 @@ return require('packer').startup(function(use)
   use({ 'SirVer/ultisnips' })
   use({ 'thinca/vim-quickrun' })
   use({ 'tpope/vim-fugitive' })
-  use({ 'tpope/vim-surround' })
   use({ 'vim-scripts/vim-stylus', ft = { 'stylus' } })
   use({ 'Xuyuanp/nerdtree-git-plugin', cmd = { 'NERDTreeToggle' } })
 end)
