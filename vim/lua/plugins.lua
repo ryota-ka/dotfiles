@@ -39,6 +39,12 @@ return require('packer').startup(function(use)
   })
   use({ 'mattn/emmet-vim', ft = { 'html', 'typescript.tsx' } })
   use({ 'metakirby5/codi.vim' })
+  use({
+    'mvllow/modes.nvim',
+    config = function()
+      require('modes').setup()
+    end
+  })
   use({ 'neoclide/coc.nvim', run = 'yarn install' })
   use({ 'neovimhaskell/haskell-vim', ft = { 'haskell' } })
   use({
