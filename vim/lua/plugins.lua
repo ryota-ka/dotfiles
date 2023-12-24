@@ -48,6 +48,24 @@ return require('packer').startup(function(use)
   use({ 'neoclide/coc.nvim', run = 'yarn install' })
   use({ 'neovimhaskell/haskell-vim', ft = { 'haskell' } })
   use({
+    'nvim-treesitter/nvim-treesitter',
+    config = function()
+      require('nvim-treesitter.configs').setup({
+        highlight = {
+          enable = true,
+          additional_vim_regex_highlighting = true,
+        },
+        indent = {
+          enable = true,
+        },
+        sync_install = false,
+      })
+    end,
+    run = function()
+      require('nvim-treesitter.install').update({ with_sync = true })()
+    end,
+  })
+  use({
     'numToStr/Comment.nvim',
     config = function()
       require('Comment').setup()
