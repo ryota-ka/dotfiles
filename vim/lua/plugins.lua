@@ -15,6 +15,28 @@ return require('packer').startup(function(use)
   use({ 'kana/vim-smartinput' })
   use({ 'kshenoy/vim-signature' })
   use({ 'LnL7/vim-nix' })
+  use({
+    'lukas-reineke/indent-blankline.nvim',
+    config = function()
+      local highlight = {
+        'Indent',
+      }
+
+      local hooks = require('ibl.hooks')
+      hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
+        vim.api.nvim_set_hl(0, 'Indent', { fg = '#333333' })
+      end)
+
+      require('ibl').setup {
+        indent = {
+          highlight = highlight,
+        },
+        scope = {
+          enabled = false,
+        },
+      }
+    end,
+  })
   use({ 'mattn/emmet-vim', ft = { 'html', 'typescript.tsx' } })
   use({ 'metakirby5/codi.vim' })
   use({ 'neoclide/coc.nvim', run = 'yarn install' })
