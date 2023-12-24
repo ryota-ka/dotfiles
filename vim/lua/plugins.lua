@@ -84,7 +84,6 @@ return require('packer').startup(function(use)
       vim.cmd('colorscheme sonokai')
     end,
   })
-  use({ 'Shougo/vimfiler.vim' })
   use({ 'SirVer/ultisnips' })
   use({ 'thinca/vim-quickrun' })
   use({ 'tpope/vim-fugitive' })
