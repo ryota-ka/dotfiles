@@ -38,5 +38,7 @@ vim.opt.updatetime = 250
 
 vim.opt.signcolumn = 'yes'
 
+vim.opt.clipboard:append('unnamedplus')
+
 -- reload buffer when modified outside of Vim
 vim.cmd([[autocmd FocusGained,BufEnter * checktime]])
