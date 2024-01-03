@@ -217,7 +217,6 @@
     completionInit = "autoload -U compinit && compinit -u";
     defaultKeymap = "emacs";
     dotDir = ".config/zsh";
-    enableSyntaxHighlighting = true;
     envExtra = ''
       export NIX_PATH=$HOME/.nix-defexpr/channels
 
@@ -254,6 +253,9 @@
       mv = "mv -i";
       p = "popd";
       vim = "nvim";
+    };
+    syntaxHighlighting = {
+      enable = true;
     };
   };
 }
