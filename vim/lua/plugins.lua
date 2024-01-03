@@ -11,6 +11,10 @@ return require('packer').startup(function(use)
   use({ 'junegunn/fzf' })
   use({ 'junegunn/fzf.vim' })
   use({ 'junegunn/vim-peekaboo' })
+  use({
+    'kevinhwang91/nvim-bqf',
+    ft = { 'qf' },
+  })
   use({ 'kshenoy/vim-signature' })
   use({
     'kwkarlwang/bufresize.nvim',
