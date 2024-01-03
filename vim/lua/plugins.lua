@@ -11,7 +11,6 @@ return require('packer').startup(function(use)
   use({ 'junegunn/fzf' })
   use({ 'junegunn/fzf.vim' })
   use({ 'junegunn/vim-peekaboo' })
-  use({ 'kana/vim-smartinput' })
   use({ 'kshenoy/vim-signature' })
   use({
     'kwkarlwang/bufresize.nvim',
@@ -106,6 +105,12 @@ return require('packer').startup(function(use)
   use({ 'thinca/vim-quickrun' })
   use({ 'tpope/vim-fugitive' })
   use({ 'vim-scripts/vim-stylus', ft = { 'stylus' } })
+  use({
+    'windwp/nvim-autopairs',
+    config = function()
+      require('nvim-autopairs').setup({})
+    end,
+  })
   use({ 'wsdjeg/vim-fetch' })
   use({ 'Xuyuanp/nerdtree-git-plugin', cmd = { 'NERDTreeToggle' } })
 end)
