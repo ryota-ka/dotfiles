@@ -24,5 +24,8 @@
         modules = [ ./home.nix ];
       };
       legacyPackages.${system} = pkgs;
+      lib = {
+        inherit (home-manager.lib) homeManagerConfiguration;
+      };
     };
 }
