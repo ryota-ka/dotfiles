@@ -133,6 +133,11 @@ return require('packer').startup(function(use)
       require('sort').setup({})
     end,
   })
+    'stevearc/stickybuf.nvim',
+    config = function()
+      require('stickybuf').setup()
+    end,
+  })
   use({ 'thinca/vim-quickrun' })
   use({ 'tpope/vim-fugitive' })
   use({ 'vim-scripts/vim-stylus', ft = { 'stylus' } })
