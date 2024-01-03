@@ -2,8 +2,7 @@
 
 ## Requirements
 
-- [Nix](https://nixos.org/)
-- [Home Manager](https://github.com/nix-community/home-manager)
+- [Nix](https://nixos.org/) with `experimental-features = nix-command flakes`
 
 ## Setting up
 

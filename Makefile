@@ -1,7 +1,7 @@
 all: build
 
 build: home.nix
-	home-manager -f ./home.nix build
+	home-manager --flake . build --impure
 
 switch: build
 	./result/activate
