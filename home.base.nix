@@ -37,6 +37,56 @@
   home.stateVersion = "22.05";
   home.username = builtins.getEnv "USER";
 
+  programs.alacritty = {
+    enable = true;
+
+    settings = {
+      colors = {
+        normal = {
+          black = "#1b1d1e";
+          red = "#f92672";
+          green = "#a6e22e";
+          yellow = "#fd971f";
+          blue = "#66d9ef";
+          magenta = "#ce27db";
+          cyan = "#ae81ff";
+          white = "#eeeeee";
+        };
+        primary = {
+          background = "#1c1d1e";
+          foreground = "#fafafa";
+        };
+      };
+      cursor = {
+        style = {
+          blinking = "On";
+        };
+      };
+      font = {
+        size = 18;
+        normal = {
+          family = "JetBrainsMono Nerd Font";
+          style = "ExtraLight";
+        };
+        bold = {
+          style = "Bold";
+        };
+        italic = {
+          style = "ExtraLight Italic";
+        };
+        bold_italic = {
+          style = "Bold Italic";
+        };
+      };
+      window = {
+        blur = true;
+        decorations = "buttonless";
+        opacity = 0.95;
+        option_as_alt = "Both";
+      };
+    };
+  };
+
   programs.direnv = {
     enable = true;
 
