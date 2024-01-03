@@ -1,5 +1,13 @@
 return require('packer').startup(function(use)
   use({
+    'andersevenrud/nvim_context_vt',
+    config = function()
+      vim.api.nvim_set_hl(0, 'ContextVt', { fg = '#555555' })
+
+      require('nvim_context_vt').setup({});
+    end,
+  })
+  use({
     'andymass/vim-matchup',
     setup = function()
       vim.g.matchup_matchparen_offscreen = { method = 'popup' }
