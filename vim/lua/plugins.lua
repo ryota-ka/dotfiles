@@ -1,4 +1,10 @@
 return require('packer').startup(function(use)
+  use({
+    'andymass/vim-matchup',
+    setup = function()
+      vim.g.matchup_matchparen_offscreen = { method = 'popup' }
+    end
+  })
   use({ 'cespare/vim-toml', ft = { 'toml' } })
   use({ 'digitaltoad/vim-pug' })
   use({ 'easymotion/vim-easymotion' })
@@ -7,7 +13,6 @@ return require('packer').startup(function(use)
   use({ 'haskell/haskell-ide-engine', ft = { 'haskell' } })
   use({ 'itchyny/lightline.vim' })
   use({ 'itchyny/vim-cursorword' })
-  use({ 'itchyny/vim-parenmatch' })
   use({ 'jghauser/mkdir.nvim' })
   use({ 'junegunn/fzf' })
   use({ 'junegunn/fzf.vim' })
@@ -83,6 +88,9 @@ return require('packer').startup(function(use)
           },
         },
         indent = {
+          enable = true,
+        },
+        matchup = {
           enable = true,
         },
         sync_install = false,
