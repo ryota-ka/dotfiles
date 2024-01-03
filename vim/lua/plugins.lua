@@ -67,6 +67,9 @@ return require('packer').startup(function(use)
     'nvim-treesitter/nvim-treesitter',
     config = function()
       require('nvim-treesitter.configs').setup({
+        autotag = {
+          enable = true,
+        },
         highlight = {
           enable = true,
           additional_vim_regex_highlighting = true,
@@ -116,6 +119,7 @@ return require('packer').startup(function(use)
       require('nvim-autopairs').setup({})
     end,
   })
+  use({ 'windwp/nvim-ts-autotag' })
   use({ 'wsdjeg/vim-fetch' })
   use({ 'Xuyuanp/nerdtree-git-plugin', cmd = { 'NERDTreeToggle' } })
 end)
