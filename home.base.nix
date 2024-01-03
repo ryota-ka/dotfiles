@@ -24,6 +24,7 @@
   home.packages = [
     pkgs.delta
     pkgs.jetbrains-mono
+    (pkgs.nerdfonts.overrideAttrs { fonts = ["JetBrainsMono"]; })
     pkgs.niv
     pkgs.yarn
   ];
