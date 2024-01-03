@@ -17,6 +17,7 @@
           home-manager.packages.${system}.default
         ];
       };
+      hmModule.${system} = import ./home.nix;
       homeConfigurations."ryota-ka" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
 
