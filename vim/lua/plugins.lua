@@ -97,6 +97,12 @@ return require('packer').startup(function(use)
     end,
   })
   use({ 'SirVer/ultisnips' })
+  use({
+    'sQVe/sort.nvim',
+    config = function()
+      require('sort').setup({})
+    end,
+  })
   use({ 'thinca/vim-quickrun' })
   use({ 'tpope/vim-fugitive' })
   use({ 'vim-scripts/vim-stylus', ft = { 'stylus' } })
