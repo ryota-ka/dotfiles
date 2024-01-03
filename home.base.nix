@@ -117,6 +117,7 @@
       co = "checkout";
       dfc = "diff --cached";
       lg = "log --oneline --graph --decorate";
+      rs = "reset";
       st = "status";
     };
     delta = {
