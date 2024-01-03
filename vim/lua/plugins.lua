@@ -19,7 +19,6 @@ return require('packer').startup(function(use)
   use({ 'editorconfig/editorconfig-vim' })
   use({ 'hashivim/vim-terraform' })
   use({ 'haskell/haskell-ide-engine', ft = { 'haskell' } })
-  use({ 'itchyny/vim-cursorword' })
   use({ 'jghauser/mkdir.nvim' })
   use({ 'junegunn/fzf' })
   use({ 'junegunn/fzf.vim' })
@@ -116,6 +115,23 @@ return require('packer').startup(function(use)
   use({ 'othree/html5.vim', ft = { 'html' } })
   use({ 'purescript-contrib/purescript-vim', ft = { 'purescript' } })
   use({ 'rust-lang/rust.vim', ft = { 'rust' } })
+  use({
+    'RRethy/vim-illuminate',
+    config = function()
+      require('illuminate').configure({
+        filetypes_denylist = {
+          'gitcommit',
+          'markdown',
+          'nerdtree',
+        },
+        providers = {
+          'lsp',
+          'treesitter',
+          'regex',
+        },
+      })
+    end
+  })
   use({ 'scrooloose/nerdtree', cmd = { 'NERDTreeFind', 'NERDTreeToggle' } })
   use({
     'sainnhe/sonokai',
