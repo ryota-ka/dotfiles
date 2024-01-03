@@ -74,6 +74,14 @@ return require('packer').startup(function(use)
           enable = true,
           additional_vim_regex_highlighting = true,
         },
+        incremental_selection = {
+          enable = true,
+          keymaps = {
+            init_selection = '+',
+            node_decremental = '-',
+            node_incremental = '+',
+          },
+        },
         indent = {
           enable = true,
         },

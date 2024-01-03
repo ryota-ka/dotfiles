@@ -73,11 +73,6 @@ vim.keymap.set('n', '<leader>ac', '<Plug>(coc-codeaction)')
 -- Fix autofix problem of current line
 vim.keymap.set('n', '<leader>qf', '<Plug>(coc-fix-current)')
 
--- Use <tab> for select selections ranges, needs server support, like: coc-tsserver, coc-python
-vim.keymap.set('n', '<TAB>', '<Plug>(coc-range-select)', { silent = true })
-vim.keymap.set('x', '<TAB>', '<Plug>(coc-range-select)', { silent = true })
-vim.keymap.set('x', '<S-TAB>', '<Plug>(coc-range-select-backword)', { silent = true })
-
 -- Use `:Format` to format current buffer
 vim.api.nvim_create_user_command('Format', "call CocAction('format')", {})
 
