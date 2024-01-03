@@ -59,6 +59,7 @@ return require('packer').startup(function(use)
   })
   use({ 'neoclide/coc.nvim', run = 'yarn install' })
   use({ 'neovimhaskell/haskell-vim', ft = { 'haskell' } })
+  use({ 'nvim-tree/nvim-web-devicons' })
   use({
     'nvim-treesitter/nvim-treesitter',
     config = function()
