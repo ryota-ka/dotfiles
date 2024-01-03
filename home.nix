@@ -34,7 +34,7 @@
   home.sessionVariables = {
     EDITOR = "nvim";
   };
-  home.stateVersion = "22.05";
+  home.stateVersion = "23.11";
   home.username = builtins.getEnv "USER";
 
   programs.alacritty = {
