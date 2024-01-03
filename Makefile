@@ -5,3 +5,4 @@ build: home.nix
 
 switch: build
 	./result/activate
+	nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
