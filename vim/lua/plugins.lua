@@ -1,6 +1,5 @@
 return require('packer').startup(function(use)
   use({ 'cespare/vim-toml', ft = { 'toml' } })
-  use({ 'delphinus/vim-auto-cursorline' })
   use({ 'digitaltoad/vim-pug' })
   use({ 'easymotion/vim-easymotion' })
   use({ 'editorconfig/editorconfig-vim' })
