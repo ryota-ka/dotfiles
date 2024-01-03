@@ -23,5 +23,6 @@
 
         modules = [ ./home.nix ];
       };
+      legacyPackages.${system} = pkgs;
     };
 }
