@@ -13,8 +13,6 @@ return require('packer').startup(function(use)
       vim.g.matchup_matchparen_offscreen = { method = 'popup' }
     end
   })
-  use({ 'cespare/vim-toml', ft = { 'toml' } })
-  use({ 'digitaltoad/vim-pug' })
   use({ 'easymotion/vim-easymotion' })
   use({ 'editorconfig/editorconfig-vim' })
   use({ 'hashivim/vim-terraform' })
@@ -72,7 +70,6 @@ return require('packer').startup(function(use)
     end
   })
   use({ 'neoclide/coc.nvim', run = 'yarn install' })
-  use({ 'neovimhaskell/haskell-vim', ft = { 'haskell' } })
   use({ 'nvim-tree/nvim-web-devicons' })
   use({
     'nvim-treesitter/nvim-treesitter',
@@ -112,9 +109,6 @@ return require('packer').startup(function(use)
       require('Comment').setup()
     end
   })
-  use({ 'othree/html5.vim', ft = { 'html' } })
-  use({ 'purescript-contrib/purescript-vim', ft = { 'purescript' } })
-  use({ 'rust-lang/rust.vim', ft = { 'rust' } })
   use({
     'RRethy/vim-illuminate',
     config = function()
