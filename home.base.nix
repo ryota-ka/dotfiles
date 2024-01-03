@@ -134,9 +134,6 @@
       color = {
         ui = "auto";
       };
-      diff = {
-        compactionHeuristic = true;
-      };
       init = {
         defaultBranch = "master";
       };
