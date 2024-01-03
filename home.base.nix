@@ -101,6 +101,7 @@
       "--bind=ctrl-space:toggle"
       "--reverse"
     ];
+    enableZshIntegration = false;
   };
 
   programs.gh = {
