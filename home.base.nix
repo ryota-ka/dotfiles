@@ -179,6 +179,7 @@
   programs.neovim = {
     enable = true;
 
+    defaultEditor = true;
     extraLuaConfig = ''
       vim.opt.runtimepath:append('${./vim}')
       require('plugins')
