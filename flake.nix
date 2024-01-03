@@ -12,6 +12,19 @@
       system = "aarch64-darwin";
       pkgs = nixpkgs.legacyPackages.${system};
     in {
+      apps.${system} =
+      let
+        switch = pkgs.writeShellScript "build.sh" ''
+          home-manager switch --flake . --impure
+          nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+        '';
+      in
+      {
+        switch = {
+          type = "app";
+          program = "${switch}";
+        };
+      };
       devShells.${system}.default = pkgs.mkShell {
         buildInputs = [
           home-manager.packages.${system}.default
