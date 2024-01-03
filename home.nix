@@ -180,6 +180,7 @@
 
     defaultEditor = true;
     extraLuaConfig = ''
+      vim.opt.termguicolors = true
       vim.opt.runtimepath:append('${./vim}')
       require('plugins')
     '';
