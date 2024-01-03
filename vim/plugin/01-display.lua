@@ -1,6 +1,7 @@
 vim.opt.showmode = false
--- display line number
-vim.opt.number = true
+
+-- display relative line number
+vim.opt.relativenumber = true
 
 -- don't give the intro message when starting Vim
 vim.opt.shortmess:append('I')
