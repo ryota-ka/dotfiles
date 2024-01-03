@@ -1,3 +1,4 @@
+vim.opt.showmode = false
 -- display line number
 vim.opt.number = true
 
