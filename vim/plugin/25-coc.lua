@@ -52,11 +52,6 @@ function _G.show_docs()
   end
 end
 
-vim.api.nvim_create_autocmd('CursorHold', {
-  command = "silent call CocActionAsync('highlight')",
-  desc = 'Highlight symbol under cursor on CursorHold',
-})
-
 -- Remap for rename current word
 vim.keymap.set('n', '<leader>rn', '<Plug>(coc-rename)')
 
