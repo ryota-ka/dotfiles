@@ -11,25 +11,27 @@
   outputs = { self, flake-utils, home-manager, nixpkgs }: flake-utils.lib.eachDefaultSystem (system:
     let
       pkgs = nixpkgs.legacyPackages.${system};
-    in {
+    in
+    {
       apps =
-      let
-        switch = pkgs.writeShellScript "build.sh" ''
-          home-manager switch --flake . --impure
-          nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
-        '';
-      in
-      {
-        switch = {
-          type = "app";
-          program = "${switch}";
+        let
+          switch = pkgs.writeShellScript "build.sh" ''
+            home-manager switch --flake . --impure
+            nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+          '';
+        in
+        {
+          switch = {
+            type = "app";
+            program = "${switch}";
+          };
         };
-      };
       devShells.default = pkgs.mkShell {
         buildInputs = [
           home-manager.packages.${system}.default
         ];
       };
+      formatter = pkgs.nixpkgs-fmt;
       hmModule = import ./home.nix;
       legacyPackages = pkgs;
       lib = {

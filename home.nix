@@ -24,7 +24,7 @@
   home.packages = [
     pkgs.delta
     pkgs.jetbrains-mono
-    (pkgs.nerdfonts.overrideAttrs { fonts = ["JetBrainsMono"]; })
+    (pkgs.nerdfonts.overrideAttrs { fonts = [ "JetBrainsMono" ]; })
     pkgs.yarn
   ];
   home.sessionPath = [
