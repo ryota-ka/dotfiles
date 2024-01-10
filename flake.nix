@@ -1,5 +1,6 @@
 {
   inputs = {
+    flake-utils.url = "github:numtide/flake-utils";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
     home-manager = {
       url = "github:nix-community/home-manager/release-23.11";
@@ -7,12 +8,11 @@
     };
   };
 
-  outputs = { self, home-manager, nixpkgs }:
+  outputs = { self, flake-utils, home-manager, nixpkgs }: flake-utils.lib.eachDefaultSystem (system:
     let
-      system = "aarch64-darwin";
       pkgs = nixpkgs.legacyPackages.${system};
     in {
-      apps.${system} =
+      apps =
       let
         switch = pkgs.writeShellScript "build.sh" ''
           home-manager switch --flake . --impure
@@ -25,20 +25,20 @@
           program = "${switch}";
         };
       };
-      devShells.${system}.default = pkgs.mkShell {
+      devShells.default = pkgs.mkShell {
         buildInputs = [
           home-manager.packages.${system}.default
         ];
       };
-      hmModule.${system} = import ./home.nix;
-      homeConfigurations."ryota-ka" = home-manager.lib.homeManagerConfiguration {
+      hmModule = import ./home.nix;
+      legacyPackages = pkgs;
+      lib = {
+        inherit (home-manager.lib) homeManagerConfiguration;
+      };
+      packages.homeConfigurations."ryota-ka" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
 
         modules = [ ./home.nix ];
       };
-      legacyPackages.${system} = pkgs;
-      lib = {
-        inherit (home-manager.lib) homeManagerConfiguration;
-      };
-    };
+    });
 }
