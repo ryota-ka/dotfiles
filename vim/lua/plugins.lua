@@ -184,7 +184,7 @@ return require('packer').startup(function(use)
     config = function()
       vim.g.sonokai_enable_italic = 1
       vim.g.sonokai_float_style = 'dim'
-      vim.g.sonokai_transparent_background = 1
+      vim.g.sonokai_transparent_background = 2
       vim.cmd('colorscheme sonokai')
     end,
   })
