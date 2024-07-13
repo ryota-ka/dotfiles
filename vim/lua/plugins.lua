@@ -81,6 +81,8 @@ return require('packer').startup(function(use)
           map('n', '<leader>gt', gs.toggle_deleted)
 
           map({'o', 'x'}, 'ig', ':<C-U>Gitsigns select_hunk<CR>')
+
+          require('scrollbar.handlers.gitsigns').setup()
         end
       })
     end
@@ -160,6 +162,59 @@ return require('packer').startup(function(use)
     config = function()
       require('Comment').setup()
     end
+  })
+  use({
+    'petertriho/nvim-scrollbar',
+    config = function()
+      local configuration = vim.api.nvim_call_function('sonokai#get_configuration', {})
+      local palette = vim.api.nvim_call_function('sonokai#get_palette', {
+        configuration.style,
+        configuration.colors_override,
+      })
+
+      require('scrollbar').setup({
+        excluded_filetypes = {
+          'cmp_docs',
+          'cmp_menu',
+          'nerdtree',
+          'noice',
+          'prompt',
+        },
+        handle = {
+          color = palette.bg4[1],
+        },
+        marks = {
+          Error = { color = palette.red[1] },
+          GitAdd = { text = '│' },
+          GitChange = { text = '│' },
+          Hint = { color = palette.green[1] },
+          Info = { color = palette.blue[1] },
+          Misc = { color = palette.purple[1] },
+          Search = { color = palette.orange[1] },
+          Warn = { color = palette.yellow[1] },
+        },
+      })
+
+      require('scrollbar.handlers').register('marks', function(bufnr)
+        local marks = vim.fn.getmarklist(bufnr)
+        local out = {}
+
+        for _, tbl in pairs(marks) do
+          local mark = tbl.mark:sub(2, 2)
+          table.insert(out, {
+            level = 8,
+            line = tbl.pos[2],
+            text = mark,
+            type = 'Info',
+          })
+        end
+
+        return out
+      end)
+    end,
+    after = {
+      'sonokai',
+    },
   })
   use({
     'RRethy/vim-illuminate',
