@@ -1,5 +1,22 @@
 return require('packer').startup(function(use)
   use({
+    'akinsho/git-conflict.nvim',
+    after = { 'sonokai' },
+    config = function()
+      require('git-conflict').setup()
+
+      local configuration = vim.api.nvim_call_function('sonokai#get_configuration', {})
+      local palette = vim.api.nvim_call_function('sonokai#get_palette', { configuration.style, configuration.colors_override })
+
+      vim.api.nvim_set_hl(0, 'GitConflictAncestor', { bg = palette.diff_red[1] })
+      vim.api.nvim_set_hl(0, 'GitConflictAncestorLabel', { bg = palette.bg_red[1] })
+      vim.api.nvim_set_hl(0, 'GitConflictCurrent', { bg = palette.diff_blue[1] })
+      vim.api.nvim_set_hl(0, 'GitConflictCurrentLabel', { bg = palette.bg_blue[1] })
+      vim.api.nvim_set_hl(0, 'GitConflictIncoming', { bg = palette.diff_green[1] })
+      vim.api.nvim_set_hl(0, 'GitConflictIncomingLabel', { bg = palette.bg_green[1] })
+    end,
+  })
+  use({
     'andersevenrud/nvim_context_vt',
     config = function()
       vim.api.nvim_set_hl(0, 'ContextVt', { fg = '#555555' })
