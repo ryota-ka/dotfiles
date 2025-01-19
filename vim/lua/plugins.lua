@@ -129,6 +129,7 @@ return require('packer').startup(function(use)
       }
     end,
   })
+  use({ 'm-demare/hlargs.nvim' })
   use({ 'mattn/emmet-vim', ft = { 'html', 'typescript.tsx' } })
   use({ 'metakirby5/codi.vim' })
   use({
