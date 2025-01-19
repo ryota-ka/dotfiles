@@ -179,12 +179,6 @@ return require('packer').startup(function(use)
     end,
   })
   use({
-    'numToStr/Comment.nvim',
-    config = function()
-      require('Comment').setup()
-    end
-  })
-  use({
     'petertriho/nvim-scrollbar',
     config = function()
       local configuration = vim.api.nvim_call_function('sonokai#get_configuration', {})
