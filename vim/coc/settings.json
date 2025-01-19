@@ -5,7 +5,7 @@
     "typescript",
     "typescriptreact"
   ],
-  "diagnostic.virtualText": true,
+  "diagnostic.displayByAle": true,
   "eslint.autoFixOnSave": true,
   "git.addGBlameToBufferVar": true,
   "git.showCommitInFloating": true,

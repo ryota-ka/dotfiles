@@ -30,6 +30,7 @@ return require('packer').startup(function(use)
       vim.g.matchup_matchparen_offscreen = { method = 'popup' }
     end
   })
+  use({ 'davidosomething/coc-diagnostics-shim.nvim' })
   use({ 'easymotion/vim-easymotion' })
   use({ 'editorconfig/editorconfig-vim' })
   use({ 'hashivim/vim-terraform' })
