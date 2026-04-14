@@ -103,7 +103,7 @@
         defaultBranch = "master";
       };
       merge = {
-        conflictStyle = "diff3";
+        conflictStyle = "zdiff3";
         ff = false;
       };
       pull = {
