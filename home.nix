@@ -96,6 +96,9 @@
       column = {
         ui = "auto";
       };
+      commit = {
+        verbose = true;
+      };
       init = {
         defaultBranch = "master";
       };
