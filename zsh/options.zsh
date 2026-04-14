@@ -37,8 +37,5 @@ setopt auto_menu
 # 明確なドットの指定なしで.から始まるファイルをマッチ
 setopt globdots
 
-# 高機能なワイルドカード展開を使用する
-setopt extended_glob
-
 # Unicode の正規化に関する問題を吸収
 setopt combining_chars
