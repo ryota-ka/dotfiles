@@ -8,7 +8,5 @@ vim.api.nvim_set_keymap('v', 'k', 'gk', { noremap = true })
 
 vim.api.nvim_set_keymap('n', '<C-]>', 'g<C-]>', { noremap = true })
 
-vim.api.nvim_set_keymap('n', '<Esc>', ':noh<CR>', { silent = true })
-
 vim.api.nvim_set_keymap('c', '<C-n>', '<Down>', { noremap = true })
 vim.api.nvim_set_keymap('c', '<C-p>', '<Up>', { noremap = true })

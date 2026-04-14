@@ -18,7 +18,6 @@
         let
           switch = pkgs.writeShellScript "build.sh" ''
             ${hm}/bin/home-manager switch --flake . --impure
-            nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
           '';
         in
         {

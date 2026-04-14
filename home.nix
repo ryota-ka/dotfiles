@@ -13,8 +13,6 @@
       '';
     in
     {
-      cocPackageJSON = link ./vim/coc/package.json "${config.xdg.configHome}/coc/extensions/package.json";
-      cocSettingsJSON = link ./vim/coc/settings.json "${config.xdg.configHome}/nvim/coc-settings.json";
       karabinerJSON = link ./karabiner.json "${config.xdg.configHome}/karabiner/karabiner.json";
       neovimBackupDir = mkdirp "${config.xdg.dataHome}/nvim/backup";
       neovimUndoDir = mkdirp "${config.xdg.dataHome}/nvim/undo";
@@ -22,9 +20,20 @@
   home.homeDirectory = builtins.getEnv "HOME";
   home.language.base = "en_US.UTF-8";
   home.packages = [
+    pkgs.copilot-language-server
     pkgs.delta
+    pkgs.fd
+    pkgs.github-copilot-cli
     pkgs.jetbrains-mono
-    pkgs.yarn
+    pkgs.nil
+    pkgs.nodePackages."@tailwindcss/language-server"
+    pkgs.nodePackages.graphql-language-service-cli
+    pkgs.ripgrep
+    pkgs.terraform-ls
+    pkgs.tree-sitter
+    pkgs.typescript-language-server
+    pkgs.vscode-langservers-extracted
+    pkgs.yaml-language-server
   ];
   home.sessionPath = [
     "$HOME/.local/bin"
@@ -128,14 +137,52 @@
 
     defaultEditor = true;
     extraLuaConfig = ''
+      vim.g.mapleader = ' '
+      vim.g.maplocalleader = ' '
+
       vim.opt.termguicolors = true
       vim.opt.runtimepath:append('${./vim}')
-      require('plugins')
+
+      local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+      if not (vim.uv or vim.loop).fs_stat(lazypath) then
+        local lazyrepo = "https://github.com/folke/lazy.nvim.git"
+        local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
+        if vim.v.shell_error ~= 0 then
+          vim.api.nvim_echo({
+            { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
+            { out, "WarningMsg" },
+            { "\nPress any key to exit..." },
+          }, true, {})
+          vim.fn.getchar()
+          os.exit(1)
+        end
+      end
+      vim.opt.rtp:prepend(lazypath)
+
+      require("lazy").setup({
+        dev = {
+          path = "${pkgs.vimUtils.packDir config.programs.neovim.finalPackage.passthru.packpathDirs}/pack/myNeovimPackages/start",
+        },
+        performance = {
+          reset_packpath = false,
+          rtp = {
+            reset = false,
+          },
+        },
+        install = {
+          missing = false,
+        },
+        spec = {
+          {
+            import = 'plugins',
+          },
+        },
+      })
     '';
     plugins = [
       {
         optional = false;
-        plugin = pkgs.vimPlugins.packer-nvim;
+        plugin = pkgs.vimPlugins.lazy-nvim;
       }
     ];
     vimAlias = true;
