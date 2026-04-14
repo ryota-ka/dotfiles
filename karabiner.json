@@ -84,14 +84,15 @@
                         "description": "ctrl + w to option + delete",
                         "manipulators": [
                             {
-                                    "conditions": [
-                                        {
-                                            "bundle_identifiers": [
-                                                "^com\\.apple\\.Terminal$"
-                                            ],
-                                            "type": "frontmost_application_unless"
-                                        }
-                                    ],
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.apple\\.Terminal$",
+                                            "^com\\.mitchellh\\.ghostty$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "w",
                                     "modifiers": {
@@ -116,6 +117,15 @@
                         "description": "option + f/b to option + arrows",
                         "manipulators": [
                             {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.apple\\.Terminal$",
+                                            "^com\\.mitchellh\\.ghostty$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "f",
                                     "modifiers": {
@@ -135,6 +145,15 @@
                                 "type": "basic"
                             },
                             {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.apple\\.Terminal$",
+                                            "^com\\.mitchellh\\.ghostty$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "b",
                                     "modifiers": {
