@@ -93,6 +93,9 @@
       color = {
         ui = "auto";
       };
+      column = {
+        ui = "auto";
+      };
       init = {
         defaultBranch = "master";
       };
