@@ -118,6 +118,7 @@
         stat = true;
       };
       rerere = {
+        autoupdate = true;
         enabled = true;
       };
     };
