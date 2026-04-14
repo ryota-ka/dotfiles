@@ -32,7 +32,7 @@
   home.sessionVariables = {
     EDITOR = "nvim";
   };
-  home.stateVersion = "24.11";
+  home.stateVersion = "25.11";
   home.username = builtins.getEnv "USER";
 
   programs.direnv = {
