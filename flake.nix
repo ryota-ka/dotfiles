@@ -29,6 +29,7 @@
       devShells.default = pkgs.mkShell {
         buildInputs = [
           hm
+          pkgs.stylua
         ];
       };
       formatter = pkgs.nixpkgs-fmt;
